@@ -263,7 +263,7 @@ const PHASES = [
       'From your very first hallo to a complete A1: greetings, numbers, time, word order, family, food, and shopping.',
     href: `${A0}/01-greetings-and-introductions`,
     status: 'live' as const,
-    statusLabel: 'Available now',
+    statusLabel: '',
   },
   {
     level: 'Phase 2',
@@ -271,8 +271,8 @@ const PHASES = [
     title: 'Expanding Your Range',
     description:
       'Past tenses in depth, opinions, comparisons, subordinate clauses, and the mysterious little word er.',
-    href: null,
-    status: 'soon' as const,
+    href: '/notes/a2/01-past-tense-depth',
+    status: 'live' as const,
     statusLabel: '',
   },
   {
@@ -281,7 +281,7 @@ const PHASES = [
     title: 'Towards Independence',
     description:
       'Passives, hypotheticals, nuance, real news articles, and handling fast natural speech on your own.',
-    href: null,
+    href: '/notes/b1/01-conjunctions-overview',
     status: 'soon' as const,
     statusLabel: '',
   },
