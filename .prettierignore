@@ -1,0 +1,7 @@
+.next
+node_modules
+.source
+out
+build
+package-lock.json
+*.mdx

@@ -1,0 +1,240 @@
+@import 'fumadocs-ui/css/lib/default-colors.css';
+
+/* ============================================================
+   THEME SEEDS — the only values you ever need to touch
+   ============================================================
+
+   --brand-h / --brand-s   →  primary color (buttons, links,
+                               ring, accents, ref-card border)
+
+   --paper-h / --paper-s   →  light-mode backgrounds, borders,
+                               sidebar, muted surfaces
+
+   --charcoal-h / --charcoal-s  →  dark-mode surfaces & borders
+
+   Quick preset swaps (just change --brand-h and --brand-s):
+     copper/Claude  22  68%
+     gold/nedUp    42  84%
+     ocean blue    210  70%
+     sage green    142  55%
+   ============================================================ */
+
+:root {
+  --brand-h: 22;
+  --brand-s: 68%;
+
+  --paper-h: 36;
+  --paper-s: 30%;
+
+  --charcoal-h: 30;
+  --charcoal-s: 8%;
+}
+
+/* ============================================================
+   Light mode  (all values derived from seeds above)
+   ============================================================ */
+
+@theme {
+  --color-fd-background: hsl(var(--paper-h) var(--paper-s) 96%);
+  --color-fd-foreground: hsl(var(--brand-h) 12% 14%);
+
+  --color-fd-primary: hsl(var(--brand-h) var(--brand-s) 50%);
+  --color-fd-primary-foreground: hsl(0 0% 100%);
+  --color-fd-ring: hsl(var(--brand-h) var(--brand-s) 50%);
+
+  --color-fd-card: hsl(0 0% 100%);
+  --color-fd-card-foreground: hsl(var(--brand-h) 12% 14%);
+
+  --color-fd-popover: hsl(0 0% 100%);
+  --color-fd-popover-foreground: hsl(var(--brand-h) 12% 14%);
+
+  --color-fd-border: hsl(var(--paper-h) calc(var(--paper-s) - 12%) 86%);
+  --color-fd-muted: hsl(var(--paper-h) calc(var(--paper-s) - 8%) 92%);
+  --color-fd-muted-foreground: hsl(var(--brand-h) 8% 46%);
+
+  --color-fd-secondary: hsl(var(--paper-h) calc(var(--paper-s) - 12%) 93%);
+  --color-fd-secondary-foreground: hsl(var(--brand-h) 12% 14%);
+
+  --color-fd-accent: hsl(var(--brand-h) 60% 93%);
+  --color-fd-accent-foreground: hsl(var(--brand-h) var(--brand-s) 28%);
+
+  /* Callout colors — semantic, not brand-derived */
+  --color-fd-callout-info-bg: hsl(210 90% 95%);
+  --color-fd-callout-info-border: hsl(210 80% 52%);
+  --color-fd-callout-warning-bg: hsl(40 100% 94%);
+  --color-fd-callout-warning-border: hsl(38 90% 48%);
+  --color-fd-callout-error-bg: hsl(0 90% 95%);
+  --color-fd-callout-error-border: hsl(0 80% 52%);
+  --color-fd-callout-success-bg: hsl(142 70% 94%);
+  --color-fd-callout-success-border: hsl(142 60% 42%);
+
+  /* RefCard — tinted with brand */
+  --color-fd-ref-card-bg: hsl(0 0% 100%);
+  --color-fd-ref-card-border: hsl(var(--brand-h) 62% 55%);
+
+  /* Banner left-border colors — semantic */
+  --color-fd-banner-default-border: hsl(
+    var(--paper-h) calc(var(--paper-s) - 12%) 70%
+  );
+  --color-fd-banner-info-border: hsl(210 80% 52%);
+  --color-fd-banner-warning-border: hsl(38 90% 48%);
+  --color-fd-banner-error-border: hsl(0 80% 52%);
+  --color-fd-banner-success-border: hsl(142 60% 42%);
+}
+
+/* ============================================================
+   Dark mode  (all values derived from seeds above)
+   ============================================================ */
+
+.dark {
+  /* Surface elevation scale */
+  --surface-0: hsl(var(--charcoal-h) var(--charcoal-s) 8%);
+  --surface-1: hsl(var(--charcoal-h) var(--charcoal-s) 11%);
+  --surface-2: hsl(var(--charcoal-h) var(--charcoal-s) 14%);
+  --surface-3: hsl(var(--charcoal-h) var(--charcoal-s) 18%);
+  --surface-4: hsl(var(--charcoal-h) var(--charcoal-s) 22%);
+  --surface-5: hsl(var(--charcoal-h) var(--charcoal-s) 26%);
+
+  /* Text emphasis scale */
+  --text-high: hsl(var(--charcoal-h) 15% 91%);
+  --text-medium: hsl(var(--charcoal-h) 8% 62%);
+  --text-low: hsl(var(--charcoal-h) 6% 42%);
+
+  --color-fd-background: var(--surface-0);
+  --color-fd-foreground: var(--text-high);
+
+  --color-fd-primary: hsl(var(--brand-h) var(--brand-s) 62%);
+  --color-fd-primary-foreground: hsl(0 0% 100%);
+  --color-fd-ring: hsl(var(--brand-h) var(--brand-s) 62%);
+
+  --color-fd-card: var(--surface-1);
+  --color-fd-card-foreground: var(--text-high);
+
+  --color-fd-popover: var(--surface-2);
+  --color-fd-popover-foreground: var(--text-high);
+
+  --color-fd-border: hsl(var(--charcoal-h) var(--charcoal-s) 20%);
+  --color-fd-muted: var(--surface-2);
+  --color-fd-muted-foreground: var(--text-medium);
+
+  --color-fd-secondary: var(--surface-2);
+  --color-fd-secondary-foreground: var(--text-high);
+
+  --color-fd-accent: hsl(var(--brand-h) 50% 18%);
+  --color-fd-accent-foreground: hsl(var(--brand-h) 80% 80%);
+
+  /* Callout colors — semantic, not brand-derived */
+  --color-fd-callout-info-bg: hsl(210 60% 13%);
+  --color-fd-callout-info-border: hsl(210 80% 58%);
+  --color-fd-callout-warning-bg: hsl(38 55% 13%);
+  --color-fd-callout-warning-border: hsl(38 85% 58%);
+  --color-fd-callout-error-bg: hsl(0 60% 13%);
+  --color-fd-callout-error-border: hsl(0 80% 58%);
+  --color-fd-callout-success-bg: hsl(142 40% 13%);
+  --color-fd-callout-success-border: hsl(142 60% 48%);
+
+  /* RefCard — tinted with brand */
+  --color-fd-ref-card-bg: var(--surface-2);
+  --color-fd-ref-card-border: hsl(var(--brand-h) 60% 42%);
+
+  /* Banner left-border colors — semantic */
+  --color-fd-banner-default-border: hsl(
+    var(--charcoal-h) var(--charcoal-s) 35%
+  );
+  --color-fd-banner-info-border: hsl(210 80% 58%);
+  --color-fd-banner-warning-border: hsl(38 85% 58%);
+  --color-fd-banner-error-border: hsl(0 80% 58%);
+  --color-fd-banner-success-border: hsl(142 60% 48%);
+}
+
+/* ============================================================
+   Component overrides
+   ============================================================ */
+
+/* Callout */
+.callout {
+  border-width: 1px;
+  border-left-width: 4px;
+}
+
+.dark .callout {
+  background-color: var(--color-fd-callout-info-bg);
+  border-color: var(--color-fd-callout-info-border);
+  border-left-color: var(--color-fd-callout-info-border);
+}
+.dark .callout[data-type='info'] {
+  background-color: var(--color-fd-callout-info-bg);
+  border-color: var(--color-fd-callout-info-border);
+  border-left-color: var(--color-fd-callout-info-border);
+}
+.dark .callout[data-type='warning'] {
+  background-color: var(--color-fd-callout-warning-bg);
+  border-color: var(--color-fd-callout-warning-border);
+  border-left-color: var(--color-fd-callout-warning-border);
+}
+.dark .callout[data-type='error'] {
+  background-color: var(--color-fd-callout-error-bg);
+  border-color: var(--color-fd-callout-error-border);
+  border-left-color: var(--color-fd-callout-error-border);
+}
+
+/* RefCard */
+.dark .card {
+  border: 1px solid var(--color-fd-ref-card-border);
+  background-color: var(--color-fd-ref-card-bg);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4);
+}
+
+/* Banner */
+.dark .banner {
+  border-left: 4px solid var(--color-fd-banner-default-border);
+  border-radius: 0.375rem;
+  background-color: var(--surface-1);
+}
+.dark .banner.border-fd-border {
+  border-left-color: var(--color-fd-banner-default-border);
+}
+.dark .banner.border-blue-200 {
+  border-left-color: var(--color-fd-banner-info-border);
+  background-color: var(--color-fd-callout-info-bg);
+}
+.dark .banner.border-amber-200 {
+  border-left-color: var(--color-fd-banner-warning-border);
+  background-color: var(--color-fd-callout-warning-bg);
+}
+.dark .banner.border-red-200 {
+  border-left-color: var(--color-fd-banner-error-border);
+  background-color: var(--color-fd-callout-error-bg);
+}
+.dark .banner.border-emerald-200 {
+  border-left-color: var(--color-fd-banner-success-border);
+  background-color: var(--color-fd-callout-success-bg);
+}
+
+/* Sidebar */
+#nd-sidebar {
+  background-color: hsl(var(--paper-h) calc(var(--paper-s) - 8%) 92%);
+}
+.dark #nd-sidebar {
+  background-color: var(--surface-0);
+}
+
+/* Interactive states */
+button:hover,
+a:hover,
+[role='button']:hover {
+  opacity: 0.88;
+}
+button:active,
+a:active,
+[role='button']:active {
+  opacity: 0.78;
+}
+button[class*='primary']:hover,
+.dark button[class*='primary']:hover {
+  filter: brightness(0.92);
+}
+button[class*='primary']:active,
+.dark button[class*='primary']:active {
+  filter: brightness(0.85);
+}

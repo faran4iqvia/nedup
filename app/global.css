@@ -1,0 +1,281 @@
+@import 'tailwindcss';
+
+/* @import 'fumadocs-ui/css/neutral.css'; */
+/* @import 'fumadocs-ui/css/dusk.css'; */
+/* @import 'fumadocs-ui/css/black.css'; */
+/* @import 'fumadocs-ui/css/solar.css'; */
+/* @import 'fumadocs-ui/css/catppuccin.css'; */
+/* @import 'fumadocs-ui/css/vitepress.css'; */
+
+@import './themes/custom-claude-ai.css';
+@import 'fumadocs-ui/css/preset.css';
+
+/* ============================================================================
+   Font Face Declarations
+   ============================================================================ */
+@font-face {
+  font-family: 'Pally';
+  src: url('/fonts/en-pally.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'ArNastaleeq';
+  src: url('/fonts/ar-nastaleeq-waqf-lazim.woff2') format('woff2');
+  font-weight: 400 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --fd-layout-width: 1920px;
+
+  --font-sans: 'Pally', 'Nunito', 'Noto Sans', Arial, Helvetica, sans-serif;
+  --font-urdu: 'UrJameel', serif;
+  --font-arabic: 'ArNastaleeq', serif;
+}
+
+html {
+  scrollbar-gutter: stable;
+  /* font-size: 16px; */
+}
+
+html > body[data-scroll-locked] {
+  margin-right: 0px !important;
+  --removed-body-scroll-bar-size: 0px !important;
+}
+
+body {
+  font-family: var(--font-sans);
+}
+
+body article#nd-page * {
+  max-width: 1920px;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4,
+.prose h5,
+.prose h6 {
+  margin-top: 0.5rem !important;
+  margin-bottom: 0.5rem !important;
+}
+
+p {
+  margin-top: 0rem !important;
+  margin-bottom: 1rem !important;
+  text-align: justify !important;
+}
+
+p:last-child {
+  margin-bottom: 0rem !important;
+}
+
+aside p {
+  margin-top: 0 !important;
+  margin-bottom: 0 !important;
+}
+
+[data-side='bottom'] p {
+  margin-bottom: 0.25rem !important;
+}
+
+.font-sans {
+  font-family: var(--font-sans);
+}
+
+.font-urdu {
+  direction: rtl;
+  font-family: var(--font-urdu);
+  font-size: 1.5rem;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+/* Force urdu/arabic font-size to inherit inside callouts and cards */
+.font-urdu div[class*='rounded-xl'],
+.font-urdu aside,
+.font-arabic div[class*='rounded-xl'],
+.font-arabic aside {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Force urdu/arabic/sans font-size inside tables — the table component hardcodes
+   `text-sm`, which otherwise shrinks cell text below the surrounding body size. */
+.font-urdu :is(table, thead, tbody, tfoot, tr, th, td, caption),
+.font-arabic :is(table, thead, tbody, tfoot, tr, th, td, caption) {
+  font-size: inherit;
+  line-height: inherit;
+}
+.font-sans :is(table, thead, tbody, tfoot, tr, th, td, caption) {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Force urdu/arabic font-size inside accordion & tabs content — these wrappers
+   hardcode `text-[0.9375rem]`, which otherwise shrinks the text below body size. */
+.font-urdu .prose-no-margin,
+.font-arabic .prose-no-margin {
+  font-size: inherit;
+  line-height: inherit;
+}
+
+/* Card title sizing — sans by default, larger inside urdu/arabic context */
+.card-title {
+  font-size: 1.125rem !important;
+  line-height: 1.4 !important;
+}
+@media (min-width: 768px) {
+  .card-title {
+    font-size: 1.25rem !important;
+  }
+}
+.font-urdu .card-title,
+.font-arabic .card-title {
+  font-size: 1.5rem !important;
+  line-height: 1.5 !important;
+}
+
+/* Card content sizing — responsive for mobile/iPad/desktop; inherit large size in urdu/arabic */
+.card-content {
+  font-size: 1rem !important;
+  line-height: 1.6 !important;
+}
+@media (min-width: 768px) {
+  .card-content {
+    font-size: 1.0625rem !important;
+  }
+}
+.font-urdu .card-content,
+.font-arabic .card-content {
+  font-size: inherit !important;
+  line-height: inherit !important;
+}
+
+.font-arabic {
+  direction: rtl;
+  font-family: var(--font-arabic);
+  font-size: 1.75rem;
+  line-height: 2;
+  text-align: justify;
+}
+
+/* Steps - starts */
+
+/* Connector line */
+.fd-steps {
+  border-color: var(--color-fd-primary);
+  opacity: 0.9;
+}
+
+/* Step number circle */
+.fd-step:before {
+  background-color: var(--color-fd-primary);
+  color: var(--color-fd-primary-foreground);
+  font-weight: 600;
+}
+
+/* Step spacing */
+.fd-step {
+  padding-bottom: 1.75rem;
+}
+
+.fd-step:last-child {
+  padding-bottom: 0;
+}
+
+/* Step heading — primary tinted, responsive size */
+.fd-step h2 {
+  color: var(--color-fd-primary) !important;
+  font-size: 1.125rem !important;
+  line-height: 1.75rem !important;
+}
+
+@media (min-width: 768px) {
+  .fd-step h2 {
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fd-step h2 {
+    font-size: 1.375rem !important;
+    line-height: 2rem !important;
+  }
+}
+/* Steps - ends */
+
+/* Banner - starts */
+.banner p {
+  margin: 0;
+}
+
+.banner > div {
+  margin: 0;
+  padding: 1rem 0;
+  padding-top: 0;
+}
+/* Banner - ends */
+
+/* Homepage entrance animations - starts */
+@keyframes zv-fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes zv-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.zv-reveal {
+  opacity: 0;
+  animation: zv-fade-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--zv-delay, 0ms);
+}
+
+.zv-fade {
+  opacity: 0;
+  animation: zv-fade-in 0.9s ease-out both;
+  animation-delay: var(--zv-delay, 0ms);
+}
+
+/* Respect users who prefer reduced motion: show content instantly, no transforms */
+@media (prefers-reduced-motion: reduce) {
+  .zv-reveal,
+  .zv-fade {
+    opacity: 1;
+    animation: none;
+    transform: none;
+  }
+}
+/* Homepage entrance animations - ends */
+
+/* PWA - starts */
+/* PWA Safe-Area Visual Fixes */
+@supports (padding-top: env(safe-area-inset-top)) {
+  /* Targets standalone PWA screens exclusively */
+  @media (display-mode: standalone) {
+    body {
+      padding-top: env(safe-area-inset-top);
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+  }
+}
+/* PWA - ends */

@@ -1,0 +1,201 @@
+@import 'fumadocs-ui/css/lib/default-colors.css';
+
+/* ============================================================================
+   Custom Dark Theme
+   Extends fumadocs with enhanced dark mode differentiation
+   ============================================================================ */
+
+@theme {
+  /* Light mode - Base colors with golden brand primary */
+  --color-fd-background: hsl(250, 20%, 92%);
+  --color-fd-primary: hsl(42, 90%, 45%);
+  --color-fd-border: hsl(240, 40%, 90%);
+  --color-fd-accent: hsl(42, 95%, 80%);
+  --color-fd-accent-foreground: hsl(42, 90%, 25%);
+  --color-fd-muted: hsl(240, 30%, 94%);
+  --color-fd-muted-foreground: hsl(240, 10%, 50%);
+  --color-fd-foreground: hsl(220, 20%, 30%);
+  --color-fd-secondary: hsl(250, 40%, 94%);
+  --color-fd-secondary-foreground: hsl(240, 40%, 10%);
+  --color-fd-card: hsl(250, 20%, 92%);
+  --color-fd-card-foreground: hsl(250, 20%, 20%);
+  --color-fd-popover-foreground: hsl(250, 40%, 20%);
+  --color-fd-popover: hsl(250, 40%, 96%);
+  --color-fd-primary-foreground: hsl(42, 15%, 12%);
+  --color-fd-ring: hsl(42, 90%, 45%);
+
+  /* Custom component colors - Light mode */
+  --color-fd-callout-info-bg: hsl(210, 100%, 94%);
+  --color-fd-callout-info-border: hsl(210, 100%, 50%);
+  --color-fd-callout-warning-bg: hsl(40, 100%, 94%);
+  --color-fd-callout-warning-border: hsl(40, 100%, 50%);
+  --color-fd-callout-error-bg: hsl(0, 100%, 94%);
+  --color-fd-callout-error-border: hsl(0, 100%, 50%);
+  --color-fd-callout-success-bg: hsl(120, 100%, 94%);
+  --color-fd-callout-success-border: hsl(120, 100%, 50%);
+
+  --color-fd-ref-card-bg: hsl(250, 20%, 92%);
+  --color-fd-ref-card-border: hsl(210, 100%, 60%);
+
+  --color-fd-banner-default-border: hsl(220, 15%, 50%);
+  --color-fd-banner-info-border: hsl(210, 100%, 50%);
+  --color-fd-banner-warning-border: hsl(40, 100%, 50%);
+  --color-fd-banner-error-border: hsl(0, 100%, 50%);
+  --color-fd-banner-success-border: hsl(120, 100%, 50%);
+}
+
+.dark {
+  /* Dark mode - Material Design approach with surface elevation */
+  --surface-0: hsl(220, 15%, 6%);
+  --surface-1: hsl(220, 15%, 10%);
+  --surface-2: hsl(220, 15%, 14%);
+  --surface-3: hsl(220, 15%, 18%);
+  --surface-4: hsl(220, 15%, 22%);
+  --surface-5: hsl(220, 15%, 26%);
+
+  /* Text emphasis levels */
+  --text-high-emphasis: hsl(220, 15%, 92%);
+  --text-medium-emphasis: hsl(220, 15%, 70%);
+  --text-disabled: hsl(220, 15%, 50%);
+
+  /* Core fumadocs variables */
+  --color-fd-ring: hsl(42, 90%, 58%);
+  --color-fd-primary-foreground: hsl(42, 20%, 15%);
+  --color-fd-popover: var(--surface-2);
+  --color-fd-popover-foreground: var(--text-high-emphasis);
+  --color-fd-primary: hsl(42, 90%, 58%);
+  --color-fd-border: hsl(220, 15%, 20%);
+  --color-fd-background: var(--surface-0);
+  --color-fd-foreground: var(--text-high-emphasis);
+  --color-fd-muted: var(--surface-2);
+  --color-fd-muted-foreground: var(--text-medium-emphasis);
+  --color-fd-accent: hsl(42, 70%, 28%);
+  --color-fd-secondary: var(--surface-2);
+  --color-fd-card-foreground: var(--text-high-emphasis);
+  --color-fd-card: var(--surface-1);
+  --color-fd-secondary-foreground: var(--text-high-emphasis);
+  --color-fd-accent-foreground: hsl(42, 95%, 80%);
+
+  /* Custom callout colors - Dark mode with tinted backgrounds */
+  --color-fd-callout-info-bg: hsl(210, 80%, 15%);
+  --color-fd-callout-info-border: hsl(210, 100%, 60%);
+  --color-fd-callout-warning-bg: hsl(40, 80%, 16%);
+  --color-fd-callout-warning-border: hsl(40, 100%, 65%);
+  --color-fd-callout-error-bg: hsl(0, 80%, 15%);
+  --color-fd-callout-error-border: hsl(0, 100%, 65%);
+  --color-fd-callout-success-bg: hsl(120, 50%, 18%);
+  --color-fd-callout-success-border: hsl(120, 100%, 60%);
+
+  /* Custom RefCard colors - Dark mode with blue tint */
+  --color-fd-ref-card-bg: hsl(210, 50%, 12%);
+  --color-fd-ref-card-border: hsl(210, 80%, 50%);
+
+  /* Custom Banner colors - Dark mode with colored left borders */
+  --color-fd-banner-default-border: hsl(220, 15%, 40%);
+  --color-fd-banner-info-border: hsl(210, 100%, 60%);
+  --color-fd-banner-warning-border: hsl(40, 100%, 60%);
+  --color-fd-banner-error-border: hsl(0, 100%, 60%);
+  --color-fd-banner-success-border: hsl(120, 100%, 55%);
+}
+
+/* ============================================================================
+   Component-specific dark mode styling
+   ============================================================================ */
+
+/* Callout styling */
+.dark .callout {
+  border-width: 1px;
+  border-left-width: 4px;
+  background-color: var(--color-fd-callout-info-bg);
+  border-color: var(--color-fd-callout-info-border);
+  border-left-color: var(--color-fd-callout-info-border);
+}
+
+.dark .callout[data-type='info'] {
+  background-color: var(--color-fd-callout-info-bg);
+  border-color: var(--color-fd-callout-info-border);
+  border-left-color: var(--color-fd-callout-info-border);
+}
+
+.dark .callout[data-type='warning'] {
+  background-color: var(--color-fd-callout-warning-bg);
+  border-color: var(--color-fd-callout-warning-border);
+  border-left-color: var(--color-fd-callout-warning-border);
+}
+
+.dark .callout[data-type='error'] {
+  background-color: var(--color-fd-callout-error-bg);
+  border-color: var(--color-fd-callout-error-border);
+  border-left-color: var(--color-fd-callout-error-border);
+}
+
+/* RefCard styling */
+.dark .card {
+  border: 1px solid var(--color-fd-ref-card-border);
+  background-color: var(--color-fd-ref-card-bg);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.3);
+}
+
+/* Banner styling */
+.dark .banner {
+  border-left: 4px solid var(--color-fd-banner-default-border);
+  border-radius: 0.375rem;
+  background-color: var(--surface-1);
+}
+
+.dark .banner.border-fd-border {
+  border-left-color: var(--color-fd-banner-default-border);
+}
+
+.dark .banner.border-blue-200 {
+  border-left-color: var(--color-fd-banner-info-border);
+  background-color: hsl(210, 50%, 12%);
+}
+
+.dark .banner.border-amber-200 {
+  border-left-color: var(--color-fd-banner-warning-border);
+  background-color: hsl(40, 50%, 14%);
+}
+
+.dark .banner.border-red-200 {
+  border-left-color: var(--color-fd-banner-error-border);
+  background-color: hsl(0, 50%, 12%);
+}
+
+.dark .banner.border-emerald-200 {
+  border-left-color: var(--color-fd-banner-success-border);
+  background-color: hsl(120, 40%, 14%);
+}
+
+/* Sidebar styling */
+#nd-sidebar {
+  background-color: hsl(250, 20%, 90%);
+}
+
+.dark #nd-sidebar {
+  background-color: var(--surface-0);
+}
+
+/* Hover state styling for buttons and interactive elements */
+button:hover,
+a:hover,
+[role='button']:hover {
+  opacity: 0.9;
+}
+
+button:active,
+a:active,
+[role='button']:active {
+  opacity: 0.85;
+}
+
+/* Primary button hover effects */
+button[class*='primary']:hover,
+.dark button[class*='primary']:hover {
+  filter: brightness(0.95);
+}
+
+button[class*='primary']:active,
+.dark button[class*='primary']:active {
+  filter: brightness(0.9);
+}

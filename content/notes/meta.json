@@ -1,0 +1,9 @@
+{
+  "title": "Welcome",
+  "description": "Level up your Nederland / Dutch",
+  "root": true,
+  "pages": [
+    "phase-1-a0-a1/a0",
+    "phase-1-a0-a1/a1"
+  ]
+}
