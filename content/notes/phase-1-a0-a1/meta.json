@@ -2,5 +2,5 @@
   "title": "Phase 1: A0 to A1",
   "description": "From absolute beginner to a complete A1 level",
   "root": true,
-	"pages": ["a0", "a1"]
+  "pages": ["a0", "a1"]
 }

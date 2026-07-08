@@ -4,8 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: 'NedUp',
     short_name: 'NedUp',
-    description:
-      'Level up your Dutch',
+    description: 'Level up your Dutch',
     start_url: '/',
     scope: '/',
     display: 'standalone',
