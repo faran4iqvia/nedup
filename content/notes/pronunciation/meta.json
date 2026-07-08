@@ -1,11 +1,12 @@
 {
   "title": "Pronunciation Track",
-  "description": "A standalone track for mastering Dutch sounds, stress, rhythm and accents",
+  "description": "Master Dutch sounds, stress, rhythm, and connected speech",
   "pages": [
     "01-vowel-sounds",
     "02-consonant-sounds",
-    "03-intonation-and-rhythm",
-    "04-connected-speech",
-    "05-regional-variation"
+    "03-word-stress",
+    "04-intonation-and-rhythm",
+    "05-connected-speech",
+    "06-regional-variation"
   ]
 }

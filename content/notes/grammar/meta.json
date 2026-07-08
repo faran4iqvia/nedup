@@ -1,4 +1,23 @@
 {
   "title": "Grammar Track",
-  "description": "A standalone track for Dutch grammar"
+  "description": "Standalone Dutch grammar reference from A0 through B1",
+  "pages": [
+    "01-personal-pronouns",
+    "02-verb-zijn",
+    "03-verb-hebben",
+    "04-present-tense-regular",
+    "05-question-formation",
+    "06-modal-verbs-intro",
+    "07-word-order-svo",
+    "08-negation",
+    "09-articles-de-het",
+    "10-possessive-pronouns",
+    "11-demonstratives",
+    "12-plural-nouns",
+    "13-adjectives",
+    "14-reflexive-verbs",
+    "15-separable-verbs",
+    "16-simple-past-regular",
+    "17-simple-past-irregular"
+  ]
 }
