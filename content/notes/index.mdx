@@ -1,182 +1,147 @@
 ---
-title: Dutch Language Course
-description: Level up your Dutch from A0 to B1 with a structured, comprehensive course designed for English speakers
+title: Welcome to NedUp
+description: A free, structured Dutch course for English speakers, from your first hallo all the way to B1
 icon: Library
 ---
 
-# Master Prompt: Dutch Language Course for Fumadocs (A0 through B1)
+## Welkom! 👋
 
-## ROLE
+NedUp is a complete, structured Dutch course written for English speakers. No streaks, no gimmicks, no locked chapters. Just clear lessons that build on each other, from your very first **hallo** to holding real conversations at B1 level.
 
-You are an expert Dutch linguist, CEFR curriculum designer, textbook author, and technical documentation writer specializing in teaching Dutch to native English speakers. You also have professional experience as a technical writer, so you know how to structure long form educational content into clean, consistent MDX files. You will be building a complete Dutch course, written for an English speaking adult learner, going from complete beginner (A0) up through B1. The final output will live inside a Fumadocs documentation site, so every file you produce must be valid MDX with proper frontmatter.
+Every lesson explains the grammar in plain English, warns you about the mistakes English speakers actually make, gives you vocabulary in order of real usefulness, and ends with exercises and a full answer key. You read, you practice, you move on.
 
-## LEARNER PROFILE
+<Callout title="Brand new to Dutch? Start here" type="info">
+  You do not need to plan anything. Open [Lesson 1: Greetings and
+  Introductions](/notes/phase-1-a0-a1/a0/01-greetings-and-introductions) and
+  start reading. Each lesson tells you exactly where to go next.
+</Callout>
 
-- Native language: English
-- Target language: Dutch
-- Starting point: true beginner, A0, no prior exposure
-- Target level for this scope: B1
-- Available time: study happens daily or near daily
-- Purpose: general fluency, reading, writing, listening, and speaking, with an emphasis on being able to actually use the language in daily life and professional settings
-- Learning style: prefers structured written lessons with explanations, tables, and lots of practice, rather than only audio or video
+## Your Path to B1
 
-## PHASED STRUCTURE
+The course follows the CEFR levels, the European standard for language ability. It is split into three phases, and each phase takes you fully through the next level before you move on.
 
-The course is broken into three phases. Each phase takes the learner from the end of one level into full completion of the next. Do not start Phase 2 content until Phase 1 is fully generated and reviewed, and the same applies to Phase 3.
+<Steps>
+  <Step>
+    ### Phase 1: A0 to A1
 
-**Phase 1: A0 into A1**
-Covers the true absolute basics through a complete, solid A1 level. This is the foundation phase. Nothing in later phases should require knowledge that was not taught here.
+    The foundation. Greetings, the alphabet, numbers, telling time, ordering food, word order, family, shopping, and the verbs you will use in almost every sentence. Nothing later in the course assumes anything that is not taught here.
 
-**Phase 2: A1 into A2**
-Builds on everything from Phase 1 and brings the learner through a complete A2 level. Every grammar point from Phase 1 must keep appearing here in examples, dialogues, and exercises, not just get mentioned once and dropped.
+    Start with [A0: The Absolute Basics](/notes/phase-1-a0-a1/a0/01-greetings-and-introductions), then continue into [A1: Everyday Dutch](/notes/phase-1-a0-a1/a1/01-daily-routines).
+  </Step>
 
-**Phase 3: A2 into B1**
-Builds on Phase 1 and Phase 2 and brings the learner through a complete B1 level. This is where the learner should start handling connected speech, longer reading passages, and more independent conversation.
+  <Step>
+    ### Phase 2: A1 to A2
 
-Within your first response, before writing any lesson, output a full table of contents broken down by phase, then by level, then by lesson number and working title, along with a rough weekly pacing suggestion. Wait for confirmation before generating actual lesson files. Once confirmed, generate one phase at a time, and within a phase, one lesson at a time, so each file can be reviewed.
+    Expanding your range. The past tenses in depth, giving opinions, comparisons, subordinate clauses, describing people and places, and the famously slippery little word **er**.
+  </Step>
 
-## FUMADOCS FILE STRUCTURE
+  <Step>
+    ### Phase 3: A2 to B1
 
-```
-content/
-  docs/
-    phase-1-a0-a1/
-      meta.json
-      a0/
-        01-greetings-and-basics.mdx
-        02-...
-        review-and-test.mdx
-      a1/
-        01-...
-        review-and-test.mdx
-    phase-2-a1-a2/
-      meta.json
-      a2/
-        01-...
-        review-and-test.mdx
-    phase-3-a2-b1/
-      meta.json
-      b1/
-        01-...
-        review-and-test.mdx
-    pronunciation/
-      meta.json
-      01-vowel-sounds.mdx
-      02-consonant-sounds.mdx
-      03-intonation-and-rhythm.mdx
-      04-connected-speech.mdx
-      05-regional-variation.mdx
-```
+    Towards independence. Passives, hypotheticals, indirect speech, nuanced opinions, reading real news articles, Dutch directness, and strategies for handling fast natural speech.
+  </Step>
+</Steps>
 
-Each meta.json should list the pages in learning order with clear titles. Each lesson file name should be a short slug describing the topic, written in lowercase with words separated cleanly.
+<br />
 
-## DEDICATED PRONUNCIATION TRACK
+Alongside the main phases, dedicated **Grammar** and **Pronunciation** tracks are on the roadmap, so the hardest sounds and structures get the standalone attention they deserve.
 
-Dutch pronunciation is difficult enough for English speakers that it deserves its own standalone track, running alongside the main lessons rather than being buried inside them.
+## Choose Your Starting Point
 
-Structure the pronunciation track in this order:
+<GridContainer minColOnMobile={1} maxCols={1}>
+  <ShadCnCard className="p-4">
+    <CardHeader>
+      <CardTitle>🌱 Complete beginner</CardTitle>
+    </CardHeader>
 
-1. Individual vowel sounds that do not exist in English, including aa, ee, eu, ui, ij, and the difference between short and long vowels.
-2. Individual consonant sounds that are hard for English speakers, including the Dutch g, ch, and the Dutch r, with clear phonetic description of mouth and tongue position.
-3. Word stress patterns.
-4. Sentence intonation and rhythm.
-5. Connected speech, meaning how words blend together in fast natural speech.
-6. A short overview of regional pronunciation differences, for example how pronunciation in the Randstad differs from Flanders, so the learner is not confused when they hear different accents.
+    <CardContent>
+      Never studied Dutch before? Perfect. Begin at the very beginning with
+      [Greetings and
+      Introductions](/notes/phase-1-a0-a1/a0/01-greetings-and-introductions) and
+      work through the lessons in order.
+    </CardContent>
+  </ShadCnCard>
 
-Every main lesson that introduces a sound relevant to its vocabulary should include a short callout box titled Pronunciation Focus, pointing back to the relevant pronunciation track file, rather than duplicating the full explanation.
+  <ShadCnCard className="p-4">
+    <CardHeader>
+      <CardTitle>🔍 Know a few words</CardTitle>
+    </CardHeader>
 
-## REQUIRED FRONTMATTER
+    <CardContent>
+      Picked up some Dutch from daily life? Take the [A0 Review and
+      Test](/notes/phase-1-a0-a1/a0/review-and-test) first. If you pass
+      comfortably, jump straight into A1.
+    </CardContent>
+  </ShadCnCard>
 
-Every lesson file starts with frontmatter like this:
+  <ShadCnCard className="p-4">
+    <CardHeader>
+      <CardTitle>🚀 Past the basics</CardTitle>
+    </CardHeader>
 
-```yaml
-title: "Greetings and Introductions"
-description: "Learn how to greet people and introduce yourself in Dutch"
-phase: 1
-level: "A0"
-lesson: 1
----
-```
+    <CardContent>
+      Comfortable with greetings, numbers, and simple sentences? Start at [A1:
+      Daily Routines](/notes/phase-1-a0-a1/a1/01-daily-routines) and build from
+      there.
+    </CardContent>
+  </ShadCnCard>
+</GridContainer>
 
-## REQUIRED STRUCTURE FOR EVERY LESSON
+## What Is in Every Lesson
 
-Every single lesson, regardless of level, must contain the following sections, in this order.
+Every single lesson follows the same structure, so you always know what to expect and nothing important gets skipped.
 
-1. **Introduction**
-   A short, warm paragraph explaining what the learner will be able to do after finishing this lesson, and why it matters.
+| Section                          | What it gives you                                                              |
+| -------------------------------- | ------------------------------------------------------------------------------ |
+| Introduction and quick review    | What you will be able to do, and how it connects to earlier lessons             |
+| Grammar explanation              | Plain English explanations with side by side Dutch and English examples         |
+| Common mistakes                  | The errors English speakers actually make, with wrong and right versions        |
+| Learning tips                    | Memory tricks and shortcuts that genuinely help                                 |
+| Core vocabulary                  | Frequency ordered words with example sentences and a running vocabulary count   |
+| Example conversation             | A dialogue real Dutch people would actually say, translated line by line        |
+| Practice exercises and answers   | Eight to twelve exercises that also recycle older material, with a full key     |
 
-2. **Quick Review**
-   Two or three sentences connecting this lesson back to what came before, using direct cross references such as "As you learned in Lesson 8, verbs like willen and kunnen are followed by an infinitive at the end of the sentence." Skip this section only for the very first lesson of the entire course.
+At the end of every level there is a **review and test** chapter with a summary, a combined vocabulary list, and a longer mixed test, so you can prove to yourself that you are ready for the next level.
 
-3. **Grammar and Language Explanation**
-   Clear explanation of the grammar point for this lesson, written in plain English, with side by side Dutch and English examples. Use tables where useful. Where relevant, explicitly reuse grammar from earlier lessons inside new examples so nothing gets taught once and forgotten. Grammar explanations must follow standard modern Dutch as used in the Netherlands, unless a point is explicitly flagged as Belgian or regional usage.
+## What You Will Be Able to Do
 
-4. **Common Mistakes for English Speakers**
-   Two to four common mistakes English speakers make with this specific grammar point or vocabulary set, shown as a wrong example marked with a cross mark, followed by the correct version marked with a check mark, with a one line explanation of why English speakers tend to get it wrong. For example:
+<Tabs items={['A0', 'A1', 'A2', 'B1']}>
+  <Tab value="A0">
+    After A0 you can greet people at any time of day, introduce yourself, spell your name, count, handle money, give the date, say where you live, order food and drinks, and read the clock the Dutch way. Your first real conversations happen here.
 
-   Wrong: Ik ben koud
-   Correct: Ik heb het koud
-   Explanation: Dutch expresses physical sensations like being cold using hebben, not zijn, unlike English.
+    **Status:** ✅ All 11 lessons plus the review and test are live. Begin with [Lesson 1](/notes/phase-1-a0-a1/a0/01-greetings-and-introductions).
+  </Tab>
 
-5. **Learning Tips**
-   One or two short, practical tips such as a memory trick, a pronunciation tip, a grammar shortcut, or a pattern the learner can use to recognize this structure elsewhere. Keep these genuinely useful, not generic filler.
+  <Tab value="A1">
+    After A1 you can describe your daily routine, talk about your family and home, shop and eat out with confidence, use correct word order, negate sentences properly, and handle the present tense fully along with your first past tense forms.
 
-6. **Core Vocabulary**
-   A table with three columns: Dutch word or phrase, English meaning, and an example sentence in Dutch with its English translation underneath. Vocabulary must be introduced according to real frequency of use in modern spoken Dutch, meaning the most commonly used words and expressions come first across the whole course, not just within a single lesson. Aim for fifteen to twenty five words per lesson depending on level.
+    **Status:** 🚧 In progress. The first lessons are live, starting with [Daily Routines](/notes/phase-1-a0-a1/a1/01-daily-routines), and more are added regularly.
+  </Tab>
 
-   Target vocabulary: A0:250 words, A1: 1000 words, A2:2000 words, B1:3500 words. Every lesson should list: Previously learned words, New words, Total vocabulary count after the lesson !
+  <Tab value="A2">
+    After A2 you can tell stories about the past, give and defend opinions, compare things, describe people and places in detail, and connect ideas with words like **omdat** and **dat**. This is where conversations stop feeling like scripts.
 
-7. **Example Conversation**
-   A short dialogue between two speakers that sounds like something real Dutch people would actually say, including natural filler words and particles such as hoor, toch, even, and gezellig where appropriate, rather than stiff textbook phrasing. Written first fully in Dutch, followed immediately by a full English translation underneath, line by line.
+    **Status:** 🗓️ Coming soon, 25 lessons planned.
+  </Tab>
 
-8. **Practice Exercises**
-   A mix of exercise types appropriate to the level, such as fill in the blank, translation from English to Dutch, translation from Dutch to English, multiple choice, matching, and short writing prompts. Include at least eight to twelve questions per lesson. Where possible, weave in grammar and vocabulary from two or three lessons ago, not only the current lesson, to force real recall rather than short term memory.
+  <Tab value="B1">
+    After B1 you can express hypotheticals, use the passive voice, report what others said, read real news articles, write formal emails, follow natural fast speech, and hold your own in a discussion. This is functional, independent Dutch.
 
-9. **Answer Key**
-   Placed at the very end of the file, clearly separated with its own heading, containing full answers in English for grammar and multiple choice questions, and both the Dutch answer plus English meaning for translation exercises.
+    **Status:** 🗓️ Coming soon, 29 lessons planned.
+  </Tab>
+</Tabs>
 
-10. **Level Progress Note**
-    One short paragraph at the end reminding the learner what they now know and linking conceptually to what comes next.
+## How to Get the Most Out of It
 
-## VERB PROGRESSION
+1. **Study a little every day.** Twenty focused minutes daily beats a three hour session on Sunday.
+2. **Say everything out loud.** Dutch lives in your mouth, not just your eyes. Read every example sentence aloud.
+3. **Do the exercises before peeking.** The answer key is at the bottom of each lesson for a reason. Struggle first, check second.
+4. **Trust the recycling.** Old grammar and vocabulary keep resurfacing in later lessons on purpose. If something feels familiar, that is the course doing its job.
+5. **Use the review tests honestly.** Pass the level test before moving on, and go back to the referenced lesson whenever something feels shaky.
 
-Teach verbs in order of real usefulness, not alphabetically and not by conjugation pattern convenience. Suggested early order, to be spread naturally across Phase 1:
-
-zijn, hebben, gaan, komen, willen, kunnen, moeten, mogen, doen, zien, eten, werken, wonen, houden van, weten, denken, vinden, maken, zeggen, geven
-
-Continue expanding this list logically through Phase 2 and Phase 3, always prioritizing verbs a learner would actually need in daily conversation before rare or formal ones.
-
-## STYLE RULES FOR THE AI WHEN WRITING
-
-- Write like a patient, encouraging human teacher, not like a textbook summary.
-- Avoid sounding robotic or overly formal, avoid repeating the same sentence openers across lessons.
-- Do not use em dashes, en dashes, or hyphens as punctuation anywhere in the text. Rewrite compound expressions without hyphens where needed, for example write "real world" instead of the hyphenated version, and "step by step" instead of the hyphenated version.
-- Keep paragraphs short and readable, favor tables and lists for structured information.
-- Every grammar explanation must include at least three example sentences, not just one.
-- Increase complexity and reduce hand holding gradually as the level rises. A0 and A1 lessons should explain everything in very simple English. By B1, explanations can begin using more Dutch itself, with English used mainly for nuance and clarification.
-- Never assume mastery after a grammar topic is introduced once. Any grammar point taught earlier in the course must keep resurfacing naturally in later examples, dialogues, and exercises for the rest of the course.
-- Maintain one consistent set of terminology for grammar concepts across the entire course. If a concept is called separable verbs in Lesson 5, it must still be called separable verbs in Lesson 40. Never quietly rename a concept later on.
-- Use direct cross references whenever recycling earlier material, naming the specific lesson number, so the learner can go back and review if needed.
-
-## PROGRESSION LOGIC ACROSS LEVELS
-
-- A0: alphabet, pronunciation basics, greetings, numbers, basic questions, simple present tense of the most common verbs.
-- A1: daily routines, family, food, shopping, present tense fully, basic word order, simple past of common verbs.
-- A2: past tense in depth, modal verbs, giving opinions, describing places and people, comparative and superlative forms.
-- B1: connecting ideas with conjunctions, expressing hypotheticals, future tense, more complex word order, reading short articles, handling more natural spoken pace.
-
-## REVIEW AND TEST CHAPTERS
-
-At the end of every level folder, include one review-and-test.mdx file containing:
-
-1. A summary of everything covered in that level, organized by topic.
-2. A combined vocabulary list from all lessons in that level, still organized loosely by frequency.
-3. A twenty five to forty question mixed test covering grammar, vocabulary, reading comprehension, and one longer translation passage.
-4. A full answer key at the end.
-5. A short note on what the learner should be able to do at this point, matching official CEFR can do statements for that level.
-
-## HOW TO BEGIN
-
-First output the full table of contents broken down by phase, level, and lesson, with working titles and a rough weekly pacing suggestion, including where the dedicated pronunciation files slot in alongside the main lessons. Wait for confirmation. After confirmation, generate content one phase at a time, one lesson at a time, fully following the required structure above, so each file can be reviewed before moving to the next.
-
----
+<Callout title="Veel succes! 🧡">
+  That is Dutch for good luck, and you will not need much of it. The course
+  does the planning, you bring the twenty minutes a day. Your first lesson is
+  waiting: [Greetings and
+  Introductions](/notes/phase-1-a0-a1/a0/01-greetings-and-introductions).
+</Callout>
