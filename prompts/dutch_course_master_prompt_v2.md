@@ -140,44 +140,6 @@ zijn, hebben, gaan, komen, willen, kunnen, moeten, mogen, doen, zien, eten, werk
 
 Continue expanding this list logically through Phase 2 and Phase 3, always prioritizing verbs a learner would actually need in daily conversation before rare or formal ones.
 
-## VERB TEACHING TEMPLATE
-
-Whenever a main lesson introduces or reviews verbs in the present tense (or later tenses), use a **consistent three tier structure**. Do not dump verbs in prose lists without tables.
-
-### Tier A: core verbs (full block each)
-
-Use for the highest frequency verbs the learner must know by heart at that level. Each Tier A verb gets **its own subsection** with this exact shape, matching [A1 Lesson 1](/notes/phase-1-a0-a1/a1/01-daily-routines) and [A1 Lesson 12](/notes/phase-1-a0-a1/a1/12-more-present-verbs):
-
-1. `#### [infinitive] ([English]) — [regular / irregular stem / special]`
-2. One line on why the verb matters or where the learner met it before (cross reference).
-3. **Full 7 row conjugation table**: ik, jij/je, u, hij/zij/het, wij/we, jullie, zij/ze — with English in the third column or a fourth column.
-4. **At least five example sentences** in a Dutch | English table, covering:
-   - one **ik** statement
-   - one **je** question with **t** drop where applicable
-   - one **hij/zij** form
-   - one **wij/jullie/zij** plural form
-   - one sentence with **niet** or **geen**
-
-Phase 1 Tier A present tense set (spread across A0 and A1, full tables required whenever each is taught or reviewed): **zijn, hebben, gaan, komen, doen, zien, eten, werken**.
-
-### Tier B: high frequency verbs (one shared table)
-
-Group verbs that follow the same pattern into **one multi column conjugation table** (ik through zij rows, one column per verb). Add a second table with **two example sentences per verb** (statement + question).
-
-Phase 1 Tier B examples: **maken, geven, zeggen, spreken, lopen, nemen, kopen, drinken, wonen**.
-
-### Tier C: extended verbs (list only)
-
-Additional verbs may appear as a **short list inside a ShadCnCard**, with one inline conjugation hint (e.g. "if you know **werken**, you know **helpen**"). Do not give full 7 row tables for Tier C at A1 unless the lesson topic is specifically about that verb.
-
-### Master reference for verb lessons
-
-At the start of any lesson that is primarily about verb conjugation, include a **present tense at a glance** (or past tense equivalent) summary table before the individual verb blocks. State the three global rules: **ik** = stem, **hij/zij/u** = stem + t (or irregular), **wij/jullie/zij** = infinitive. Always explain the **jij** rule: **t** drops when **je** follows the verb (**Werk** je?, not **Werkt** je?).
-
-### Past and other tenses
-
-Apply the same tier logic when teaching simple past (A1 Lessons 18–19) and later tenses: Tier A verbs get full tables + five examples; Tier B grouped; Tier C listed. Keep terminology consistent: **stem**, **infinitive**, **conjugation**, **regular**, **irregular**.
-
 ## STYLE RULES FOR THE AI WHEN WRITING
 
 - Write like a patient, encouraging human teacher, not like a textbook summary.

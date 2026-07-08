@@ -1,0 +1,30 @@
+{
+  "title": "📚 A1: Everyday Dutch",
+  "description": "Daily routines, word order, family, shopping, and simple past tense",
+  "root": true,
+  "defaultOpen": true,
+  "pages": [
+    "01-daily-routines",
+    "02-word-order-svo",
+    "03-negation",
+    "04-family",
+    "05-possessives",
+    "06-food-and-drink",
+    "07-at-the-restaurant",
+    "08-shopping",
+    "09-demonstratives",
+    "10-plural-nouns",
+    "11-adjectives",
+    "12-more-present-verbs",
+    "13-housing",
+    "14-hobbies",
+    "15-transport",
+    "16-weather",
+    "17-body-health",
+    "18-simple-past-regular",
+    "19-simple-past-irregular",
+    "20-reflexive-verbs",
+    "21-separable-verbs",
+    "review-and-test"
+  ]
+}

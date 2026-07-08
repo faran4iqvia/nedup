@@ -1,6 +1,7 @@
 {
-  "title": "Pronunciation Track",
+  "title": "📚 Pronunciation Track",
   "description": "Master Dutch sounds, stress, rhythm, and connected speech",
+  "root": true,
   "pages": [
     "01-vowel-sounds",
     "02-consonant-sounds",

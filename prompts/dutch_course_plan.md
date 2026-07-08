@@ -1,6 +1,6 @@
 # Dutch Language Course Plan (A0 through B1)
 
-Reference document for the full NedUp Dutch course curriculum. Use this alongside `dutch_course_master_prompt_v2.md` when generating lesson content.
+Reference document for the full Dutchyy Dutch course curriculum. Use this alongside `dutch_course_master_prompt_v2.md` when generating lesson content.
 
 **Status:** Approved plan. No lesson files generated yet.
 

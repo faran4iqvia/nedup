@@ -1,6 +1,7 @@
 {
-  "title": "Grammar Track",
+  "title": "📚 Grammar Track",
   "description": "Standalone Dutch grammar reference from A0 through B1",
+  "root": true,
   "pages": [
     "01-personal-pronouns",
     "02-verb-zijn",

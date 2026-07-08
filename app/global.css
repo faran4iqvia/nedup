@@ -88,6 +88,19 @@ aside p {
   font-family: var(--font-sans);
 }
 
+/* Sans (Pally) prose sizing — fumadocs defaults to 1rem which reads small next
+   to the 1.5rem+ Urdu/Arabic blocks. Tables, code and headings are em-based,
+   so they scale with this; .font-urdu/.font-arabic set explicit sizes and are
+   unaffected. */
+.prose {
+  font-size: 1.0625rem;
+}
+@media (min-width: 768px) {
+  .prose {
+    font-size: 1.125rem;
+  }
+}
+
 .font-urdu {
   direction: rtl;
   font-family: var(--font-urdu);
@@ -143,12 +156,12 @@ aside p {
 
 /* Card content sizing — responsive for mobile/iPad/desktop; inherit large size in urdu/arabic */
 .card-content {
-  font-size: 1rem !important;
+  font-size: 1.0625rem !important;
   line-height: 1.6 !important;
 }
 @media (min-width: 768px) {
   .card-content {
-    font-size: 1.0625rem !important;
+    font-size: 1.125rem !important;
   }
 }
 .font-urdu .card-content,

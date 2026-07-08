@@ -2,8 +2,8 @@ import type { MetadataRoute } from 'next';
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: 'NedUp',
-    short_name: 'NedUp',
+    name: 'Dutchyy',
+    short_name: 'Dutchyy',
     description: 'Level up your Dutch',
     start_url: '/',
     scope: '/',

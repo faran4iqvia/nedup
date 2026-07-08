@@ -1,4 +1,4 @@
-export const appName = 'NedUp';
+export const appName = 'Dutchyy';
 export const docsRoute = '/notes';
 export const docsImageRoute = '/og/notes';
 export const docsContentRoute = '/llms.mdx/notes';
