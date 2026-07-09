@@ -6,6 +6,7 @@
   "pagesIndex": "00-introduction",
   "pages": [
     "00-introduction",
+    "cheat-sheet",
     "01-greetings-and-introductions",
     "02-alphabet-and-spelling",
     "03-numbers-0-20-and-age",
@@ -17,6 +18,7 @@
     "09-where-do-you-live",
     "10-ordering-food-and-drink",
     "11-telling-time-and-reading-the-clock",
+    "12-de-het-primer",
     "review-and-test"
   ]
 }

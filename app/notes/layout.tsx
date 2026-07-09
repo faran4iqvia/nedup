@@ -1,5 +1,4 @@
-import { DocsLayout } from 'fumadocs-ui/layouts/notebook';
-import { baseOptions } from '@/lib/layout.shared';
+import NotesDocsLayout from '@/components/app-ui/notes-docs-layout';
 import { buildNotesTabs } from '@/lib/notes-tabs';
 import { source } from '@/lib/source';
 import {
@@ -11,6 +10,7 @@ import {
   Shell,
   Hand,
   HatGlasses,
+  ChartLine,
 } from 'lucide-react';
 
 const tree = source.getPageTree();
@@ -21,6 +21,12 @@ const tabs = buildNotesTabs(tree, [
     description: 'Start Here',
     url: '/notes',
     icon: <Hand className="h-5 w-5 text-orange-500" />,
+  },
+  {
+    title: 'Drill and Progress',
+    description: 'Track & Drill',
+    url: '/notes/daily-drill',
+    icon: <ChartLine className="h-5 w-5 text-emerald-500" />,
   },
   {
     title: 'A0',
@@ -69,8 +75,8 @@ const tabs = buildNotesTabs(tree, [
 // @ts-ignore
 export default function Layout({ children }: LayoutProps<'/notes'>) {
   return (
-    <DocsLayout {...baseOptions()} tree={tree} tabMode="sidebar" tabs={tabs}>
+    <NotesDocsLayout tree={tree} tabs={tabs}>
       {children}
-    </DocsLayout>
+    </NotesDocsLayout>
   );
 }

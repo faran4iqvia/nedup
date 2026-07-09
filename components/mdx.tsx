@@ -35,6 +35,14 @@ import DrawerFromVaul from '@/components/app-ui/drawer';
 import CardWithBg from '@/components/app-ui/card-with-bg';
 import PageActions from '@/components/app-ui/page-actions';
 import GridContainer from '@/components/app-ui/grid-container';
+import ExerciseAccordion from '@/components/app-ui/exercise-accordion';
+import FlashCard from '@/components/app-ui/flash-card';
+import FlashCardDeck from '@/components/app-ui/flash-card-deck';
+import LessonFlashcards from '@/components/app-ui/lesson-flashcards';
+import GrammarFocus from '@/components/app-ui/grammar-focus';
+import VocabularyTool from '@/components/app-ui/vocabulary-tool';
+import LessonCompleteButton from '@/components/app-ui/lesson-complete-button';
+import LessonVocabularyTool from '@/components/app-ui/lesson-vocabulary-tool';
 import { Steps, Step } from './steps';
 import type { HTMLAttributes } from 'react';
 
@@ -122,6 +130,14 @@ export function getMDXComponents(components?: MDXComponents) {
     CardWithBg,
     PageActions,
     GridContainer,
+    ExerciseAccordion,
+    FlashCard,
+    FlashCardDeck,
+    LessonFlashcards,
+    GrammarFocus,
+    VocabularyTool,
+    LessonVocabularyTool,
+    LessonCompleteButton,
     Image,
     ...components,
   } satisfies MDXComponents;

@@ -14,6 +14,7 @@ import {
 import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/components/mdx';
 import PageActions from '@/components/app-ui/page-actions';
+import GrammarTaughtIn from '@/components/app-ui/grammar-taught-in';
 import type { Metadata } from 'next';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 
@@ -36,6 +37,12 @@ export default async function Page(props: PageProps<'/notes/[[...slug]]'>) {
   const needsUrduFontInTitle = !hasEnglishLetters && isUrduPage;
 
   const needsUrduFontInContent = !!isUrduPage;
+
+  const slugPath = params.slug?.join('/') ?? '';
+  const isGrammarLesson =
+    params.slug?.[0] === 'grammar' &&
+    slugPath !== 'grammar/00-introduction' &&
+    slugPath !== 'grammar/review-and-practice';
 
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
@@ -60,6 +67,9 @@ export default async function Page(props: PageProps<'/notes/[[...slug]]'>) {
         /> */}
       </div>
       <DocsBody>
+        {isGrammarLesson && (
+          <GrammarTaughtIn grammarPath={`/notes/${slugPath}`} />
+        )}
         <MDX
           components={getMDXComponents({
             // this allows you to link to other pages with relative file paths

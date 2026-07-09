@@ -3,5 +3,20 @@
   "description": "Conversation drills for travel, offices, and everyday situations",
   "root": true,
   "pagesIndex": "00-introduction",
-  "pages": ["00-introduction", "a1-airport-immigration"]
+  "pages": [
+    "00-introduction",
+    "a1-airport-immigration",
+    "a1-pharmacy-apotheek",
+    "a1-huisarts-gp",
+    "a1-supermarket-checkout",
+    "a1-train-ticket",
+    "a1-asking-directions",
+    "a2-hotel-check-in",
+    "a2-phone-reschedule",
+    "a2-explaining-a-problem",
+    "a2-past-trip-story",
+    "b1-gemeente-registration",
+    "b1-customer-service-call",
+    "b1-landlord-conversation"
+  ]
 }
