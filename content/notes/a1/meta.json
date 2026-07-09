@@ -3,7 +3,9 @@
   "description": "Daily routines, word order, family, shopping, and simple past tense",
   "root": true,
   "defaultOpen": true,
+  "pagesIndex": "00-introduction",
   "pages": [
+    "00-introduction",
     "01-daily-routines",
     "02-word-order-svo",
     "03-negation",

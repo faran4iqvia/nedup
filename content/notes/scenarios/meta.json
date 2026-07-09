@@ -1,0 +1,7 @@
+{
+  "title": "🎭 Real-Life Scenarios",
+  "description": "Conversation drills for travel, offices, and everyday situations",
+  "root": true,
+  "pagesIndex": "00-introduction",
+  "pages": ["00-introduction", "a1-airport-immigration"]
+}

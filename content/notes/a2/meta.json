@@ -2,7 +2,9 @@
   "title": "📚 A2: Expanding Your Range",
   "description": "Past tenses in depth, opinions, descriptions, and more complex Dutch",
   "root": true,
+  "pagesIndex": "00-introduction",
   "pages": [
+    "00-introduction",
     "01-past-tense-depth",
     "02-perfect-tense-intro",
     "03-perfect-irregular",

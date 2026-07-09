@@ -2,12 +2,15 @@
   "title": "📚 Pronunciation Track",
   "description": "Master Dutch sounds, stress, rhythm, and connected speech",
   "root": true,
+  "pagesIndex": "00-introduction",
   "pages": [
+    "00-introduction",
     "01-vowel-sounds",
     "02-consonant-sounds",
     "03-word-stress",
     "04-intonation-and-rhythm",
     "05-connected-speech",
-    "06-regional-variation"
+    "06-regional-variation",
+    "review-and-practice"
   ]
 }

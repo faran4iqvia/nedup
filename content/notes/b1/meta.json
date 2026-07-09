@@ -2,7 +2,9 @@
   "title": "📚 B1: Towards Independence",
   "description": "Connecting ideas, expressing nuance, reading real texts and handling natural speech",
   "root": true,
+  "pagesIndex": "00-introduction",
   "pages": [
+    "00-introduction",
     "01-conjunctions-overview",
     "02-relative-clauses",
     "03-waar-plus-preposition",

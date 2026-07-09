@@ -3,7 +3,9 @@
   "description": "Your first steps in Dutch, from zero to your first real conversations",
   "root": true,
   "defaultOpen": true,
+  "pagesIndex": "00-introduction",
   "pages": [
+    "00-introduction",
     "01-greetings-and-introductions",
     "02-alphabet-and-spelling",
     "03-numbers-0-20-and-age",

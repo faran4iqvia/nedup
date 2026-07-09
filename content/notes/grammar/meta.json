@@ -2,7 +2,9 @@
   "title": "📚 Grammar Track",
   "description": "Standalone Dutch grammar reference from A0 through B1",
   "root": true,
+  "pagesIndex": "00-introduction",
   "pages": [
+    "00-introduction",
     "01-personal-pronouns",
     "02-verb-zijn",
     "03-verb-hebben",
@@ -24,13 +26,13 @@
     "19-past-tense-weak-strong",
     "20-modal-verbs-depth",
     "21-comparatives-superlatives",
-    "28-er-constructions",
     "22-prepositions-place",
     "23-prepositions-time-movement",
     "24-relative-clauses",
     "25-om-te-infinitive",
     "26-subordinate-want-omdat",
     "27-indirect-objects-pronouns",
+    "28-er-constructions",
     "29-conditional-als",
     "30-passive-voice",
     "31-extended-subordinate-clauses",
@@ -60,6 +62,7 @@
     "55-idioms-and-expressions",
     "56-fast-speech-strategies",
     "57-practical-netherlands",
-    "58-bringing-it-together"
+    "58-bringing-it-together",
+    "review-and-practice"
   ]
 }
