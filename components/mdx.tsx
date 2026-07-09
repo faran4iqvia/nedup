@@ -28,7 +28,15 @@ import {
   CardFooter,
 } from '@/components/ui/card';
 import { Typography } from '@/components/ui/typography';
-import { SansBase, SansMd, SansLg } from '@/components/ui/font-text';
+import {
+  SansBase,
+  SansMd,
+  SansLg,
+  ArabicBase,
+  ArabicMd,
+  ArabicLg,
+  ArabicSm,
+} from '@/components/ui/font-text';
 import Banner from '@/components/app-ui/banner';
 import RefCard from '@/components/app-ui/ref-card';
 import DrawerFromVaul from '@/components/app-ui/drawer';
@@ -123,6 +131,10 @@ export function getMDXComponents(components?: MDXComponents) {
     SansBase,
     SansMd,
     SansLg,
+    ArabicBase,
+    ArabicMd,
+    ArabicLg,
+    ArabicSm,
     // app-ui components
     Banner,
     RefCard,
