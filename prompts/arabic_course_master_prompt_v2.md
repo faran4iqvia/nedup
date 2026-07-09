@@ -14,15 +14,15 @@ Every learner facing Arabic string must include **full harakat** unless the less
 
 ## LEARNER PROFILE
 
-| Field | Detail |
-| --- | --- |
-| **L1** | English |
-| **Script** | Can decode Arabic; may recite salah without understanding |
-| **Comprehension** | Zero vocabulary and grammar understanding |
-| **Goal** | Understand Quranic Arabic at B1 reading level |
+| Field               | Detail                                                          |
+| ------------------- | --------------------------------------------------------------- |
+| **L1**              | English                                                         |
+| **Script**          | Can decode Arabic; may recite salah without understanding       |
+| **Comprehension**   | Zero vocabulary and grammar understanding                       |
+| **Goal**            | Understand Quranic Arabic at B1 reading level                   |
 | **Transliteration** | Plain ASCII on every new phrase through Q1; encouraged in Q2–Q3 |
-| **Study rhythm** | Daily or near daily |
-| **Style** | Tables, word by word ayah breakdowns, roots, written exercises |
+| **Study rhythm**    | Daily or near daily                                             |
+| **Style**           | Tables, word by word ayah breakdowns, roots, written exercises  |
 
 ### Mindset from Lesson 1
 
@@ -34,12 +34,12 @@ Shift from **decoding** to **comprehending**. Reading without understanding is a
 
 One linear path — no parallel tracks:
 
-| Level | CEFR (reading) | Lessons | Outcome |
-| --- | --- | --- | --- |
-| **F0** | A0 | 12 | Harakat, roots preview, first ayat, salah phrases |
-| **Q1** | A1 | 21 | Juz Amma, core grammar, ~500 words |
-| **Q2** | A2 | 21 | Forms II–VI, weak verbs, longer ayat |
-| **Q3** | B1 | 28 | Forms VII–X, i'rab awareness, independent mushaf reading |
+| Level  | CEFR (reading) | Lessons | Outcome                                                  |
+| ------ | -------------- | ------- | -------------------------------------------------------- |
+| **F0** | A0             | 12      | Harakat, roots preview, first ayat, salah phrases        |
+| **Q1** | A1             | 21      | Juz Amma, core grammar, ~500 words                       |
+| **Q2** | A2             | 21      | Forms II–VI, weak verbs, longer ayat                     |
+| **Q3** | B1             | 28      | Forms VII–X, i'rab awareness, independent mushaf reading |
 
 **Three phases:**
 
@@ -77,11 +77,11 @@ Each folder has `meta.json` listing pages in order. Slugs: lowercase, hyphens.
 
 Use `components/ui/font-text.tsx` (registered in `components/mdx.tsx`):
 
-| Component | When to use |
-| --- | --- |
+| Component      | When to use                               |
+| -------------- | ----------------------------------------- |
 | `<ArabicBase>` | Words, table cells, inline ayah fragments |
-| `<ArabicMd>` | Ayah spotlight lines |
-| `<ArabicLg>` | Full ayah display |
+| `<ArabicMd>`   | Ayah spotlight lines                      |
+| `<ArabicLg>`   | Full ayah display                         |
 
 ```mdx
 <ArabicBase>الْكِتَابُ كَبِيرٌ</ArabicBase>
@@ -95,16 +95,16 @@ Wrap Arabic cells in `<ArabicBase>`. Column order: **Arabic | Transliteration | 
 
 ### MDX components
 
-| Component | Usage |
-| --- | --- |
-| `<ArabicBase>` / `<ArabicMd>` / `<ArabicLg>` | All Arabic text |
-| `<GrammarFocus lessonId="q1/03-…" />` | Grammar deep dive links |
-| `<LessonVocabularyTool lessonId="…" />` | Vocab marking |
-| `<LessonFlashcards lessonId="…" />` | Flashcards |
-| `<ExerciseAccordion title="Show answer key">` | Answer keys |
-| `<LessonCompleteButton lessonId="…" />` | Progress |
-| `<ShadCnCard>` | Mistakes, grouped content |
-| `<Callout title="Pronunciation Focus">` | Pronunciation track link |
+| Component                                     | Usage                     |
+| --------------------------------------------- | ------------------------- |
+| `<ArabicBase>` / `<ArabicMd>` / `<ArabicLg>`  | All Arabic text           |
+| `<GrammarFocus lessonId="q1/03-…" />`         | Grammar deep dive links   |
+| `<LessonVocabularyTool lessonId="…" />`       | Vocab marking             |
+| `<LessonFlashcards lessonId="…" />`           | Flashcards                |
+| `<ExerciseAccordion title="Show answer key">` | Answer keys               |
+| `<LessonCompleteButton lessonId="…" />`       | Progress                  |
+| `<ShadCnCard>`                                | Mistakes, grouped content |
+| `<Callout title="Pronunciation Focus">`       | Pronunciation track link  |
 
 Optional when built: `<QuranFocus>`, `<RootSpotlight root="k-t-b">`, `<AyahBreakdown>` — until then use markdown tables.
 
@@ -116,7 +116,7 @@ Optional when built: `<QuranFocus>`, `<RootSpotlight root="k-t-b">`, `<AyahBreak
 
 ```yaml
 ---
-title: 'Past Tense: fa''ala in the Quran'
+title: "Past Tense: fa'ala in the Quran"
 description: 'Understand past tense verbs in high frequency ayat'
 phase: 1
 level: 'Q1'
@@ -173,9 +173,9 @@ Link to 2–3 prior lessons. Skip only F0 Lesson 1.
 
 When a root is central (most F0–Q2 lessons):
 
-| Root | Pattern | Arabic example | Meaning |
-| --- | --- | --- | --- |
-| k-t-b | fa'ala | كَتَبَ | he wrote |
+| Root  | Pattern | Arabic example | Meaning  |
+| ----- | ------- | -------------- | -------- |
+| k-t-b | fa'ala  | كَتَبَ         | he wrote |
 
 Max 1–2 roots per lesson.
 
@@ -289,10 +289,10 @@ Each level: topic summary, vocabulary list, 25–40 question test, answer key, c
 
 ## AYAH BREAKDOWN TABLE TEMPLATE
 
-| # | Arabic | Transliteration | Meaning | Grammar note |
-| --- | --- | --- | --- | --- |
-| 1 | <ArabicBase>بِسْمِ</ArabicBase> | bismi | In the name of | Idafa; bi + ism |
-| 2 | <ArabicBase>اللَّهِ</ArabicBase> | Allahi | Allah (genitive) | Idafa partner |
+| #   | Arabic                           | Transliteration | Meaning          | Grammar note    |
+| --- | -------------------------------- | --------------- | ---------------- | --------------- |
+| 1   | <ArabicBase>بِسْمِ</ArabicBase>  | bismi           | In the name of   | Idafa; bi + ism |
+| 2   | <ArabicBase>اللَّهِ</ArabicBase> | Allahi          | Allah (genitive) | Idafa partner   |
 
 **Smooth translation:** …
 
