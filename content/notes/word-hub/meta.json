@@ -5,6 +5,7 @@
   "pagesIndex": "00-introduction",
   "pages": [
     "00-introduction",
+    "greetings-and-phrases",
     "nouns",
     "verbs",
     "adjectives",
@@ -13,6 +14,7 @@
     "pronouns",
     "conjunctions",
     "numbers",
-    "question-words"
+    "question-words",
+    "particles"
   ]
 }
