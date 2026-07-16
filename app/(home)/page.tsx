@@ -178,6 +178,58 @@ const Icon = {
       />
     </svg>
   ),
+  masks: (p: IconProps) => (
+    <svg
+      viewBox="0 0 20 20"
+      fill="none"
+      className={p.className}
+      aria-hidden="true"
+    >
+      <path
+        d="M2 4.5A2.5 2.5 0 0 1 4.5 2h5A2.5 2.5 0 0 1 12 4.5v2.25a2.5 2.5 0 0 1-2.5 2.5H7.56l-2.33 1.87A.75.75 0 0 1 4 10.53V9.2A2.5 2.5 0 0 1 2 6.75V4.5Zm11.5 2.25c0 .32-.04.63-.11.93a4 4 0 0 1-3.89 3.07h-.6l-.4.32a3.5 3.5 0 0 0 3.2 2.43h2.4l2.13 1.7a.75.75 0 0 0 1.22-.58v-1.35A2.5 2.5 0 0 0 18 10.9V9.25a2.5 2.5 0 0 0-2.5-2.5h-2Z"
+        fill="currentColor"
+      />
+    </svg>
+  ),
+  speaker: (p: IconProps) => (
+    <svg
+      viewBox="0 0 20 20"
+      fill="none"
+      className={p.className}
+      aria-hidden="true"
+    >
+      <path
+        d="M11.5 3.06a.75.75 0 0 1 .5.7v12.48a.75.75 0 0 1-1.25.56L6.9 13.5H4a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h2.9l3.85-3.3a.75.75 0 0 1 .75-.14Zm2.6 3.49a.75.75 0 0 1 1.06.05 5 5 0 0 1 0 6.8.75.75 0 1 1-1.1-1.02 3.5 3.5 0 0 0 0-4.76.75.75 0 0 1 .04-1.07Zm2.53-2.3a.75.75 0 0 1 1.06.03 8.5 8.5 0 0 1 0 11.44.75.75 0 1 1-1.1-1.02 7 7 0 0 0 0-9.4.75.75 0 0 1 .04-1.06Z"
+        fill="currentColor"
+      />
+    </svg>
+  ),
+  book: (p: IconProps) => (
+    <svg
+      viewBox="0 0 20 20"
+      fill="none"
+      className={p.className}
+      aria-hidden="true"
+    >
+      <path
+        d="M10 4.06C8.9 3.08 7.4 2.5 5.75 2.5c-1.1 0-2.14.26-3.06.71a.75.75 0 0 0-.44.68v11.36a.75.75 0 0 0 1.07.68 5.46 5.46 0 0 1 2.43-.56c1.5 0 2.87.6 3.87 1.57.1.1.24.16.38.16s.28-.06.38-.16a5.56 5.56 0 0 1 3.87-1.57c.87 0 1.7.2 2.43.56a.75.75 0 0 0 1.07-.68V3.9a.75.75 0 0 0-.44-.68 7.02 7.02 0 0 0-3.06-.71c-1.65 0-3.15.58-4.25 1.56Zm-.75 1.32A4.06 4.06 0 0 0 5.75 4c-.6 0-1.19.1-1.75.3v9.75c.56-.17 1.15-.27 1.75-.27 1.26 0 2.45.34 3.5.94V5.38Zm1.5 9.34a6.98 6.98 0 0 1 3.5-.94c.6 0 1.19.1 1.75.27V4.3c-.56-.2-1.15-.3-1.75-.3-1.31 0-2.53.51-3.5 1.38v9.34Z"
+        fill="currentColor"
+      />
+    </svg>
+  ),
+  chart: (p: IconProps) => (
+    <svg
+      viewBox="0 0 20 20"
+      fill="none"
+      className={p.className}
+      aria-hidden="true"
+    >
+      <path
+        d="M3.75 3a.75.75 0 0 1 .75.75V15.5h11.75a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75V3.75A.75.75 0 0 1 3.75 3Zm3.5 6a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 7.25 9Zm3.5-3a.75.75 0 0 1 .75.75v6a.75.75 0 0 1-1.5 0v-6a.75.75 0 0 1 .75-.75Zm3.5-2a.75.75 0 0 1 .75.75v8a.75.75 0 0 1-1.5 0v-8a.75.75 0 0 1 .75-.75Z"
+        fill="currentColor"
+      />
+    </svg>
+  ),
   instagram: (p: IconProps) => (
     <svg
       viewBox="0 0 20 20"
@@ -261,7 +313,7 @@ const PHASES = [
     title: 'The Foundation',
     description:
       'From your very first hallo to a complete A1: greetings, numbers, time, word order, family, food, and shopping.',
-    href: `${A0}/01-greetings-and-introductions`,
+    href: `${A0}/00-introduction`,
     status: 'live' as const,
     statusLabel: '',
   },
@@ -271,7 +323,7 @@ const PHASES = [
     title: 'Expanding Your Range',
     description:
       'Past tenses in depth, opinions, comparisons, subordinate clauses, and the mysterious little word er.',
-    href: '/notes/a2/01-past-tense-depth',
+    href: '/notes/a2/00-introduction',
     status: 'live' as const,
     statusLabel: '',
   },
@@ -281,9 +333,39 @@ const PHASES = [
     title: 'Towards Independence',
     description:
       'Passives, hypotheticals, nuance, real news articles, and handling fast natural speech on your own.',
-    href: '/notes/b1/01-conjunctions-overview',
-    status: 'soon' as const,
+    href: '/notes/b1/00-introduction',
+    status: 'live' as const,
     statusLabel: '',
+  },
+];
+
+const TRACKS = [
+  {
+    href: '/notes/scenarios/00-introduction',
+    title: 'Real-Life Scenarios',
+    description:
+      'Conversation drills for the station, the huisarts, the gemeente, and more.',
+    icon: Icon.masks,
+  },
+  {
+    href: '/notes/pronunciation/00-introduction',
+    title: 'Pronunciation',
+    description:
+      'Vowels, the famous harde g, word stress, and fast connected speech.',
+    icon: Icon.speaker,
+  },
+  {
+    href: '/notes/grammar/00-introduction',
+    title: 'Grammar Reference',
+    description: 'Every grammar topic from A0 to B1, in one browsable track.',
+    icon: Icon.book,
+  },
+  {
+    href: '/notes/daily-drill',
+    title: 'Daily Drill & Progress',
+    description:
+      'Five recall questions a day, plus a progress tracker saved in your browser.',
+    icon: Icon.chart,
   },
 ];
 
@@ -291,7 +373,7 @@ const BENEFITS = [
   {
     title: 'CEFR-structured',
     description:
-      'A real curriculum, not random tips. Every lesson builds on the last, with review-and-test checkpoints at each level.',
+      'A real curriculum, not random tips. Every lesson builds on the last, with cheat sheets and review-and-test checkpoints at each level.',
     icon: Icon.route,
   },
   {
@@ -303,13 +385,13 @@ const BENEFITS = [
   {
     title: 'Practice-heavy',
     description:
-      'Dialogues, vocabulary tables, and exercises in every lesson — you use the language, not just read about it.',
+      'Dialogues, flashcards, and exercises in every lesson — plus a five-minute daily drill that recycles what you have learned.',
     icon: Icon.pencil,
   },
   {
     title: 'Free & fast',
     description:
-      'Static pages, no ads, no signup. Every lesson loads instantly, even on the train to work.',
+      'Static pages, no ads, no signup. Progress is saved in your browser, and every lesson loads instantly.',
     icon: Icon.fast,
   },
 ];
@@ -323,18 +405,11 @@ const FEATURED_LESSONS = [
       'Your very first Dutch conversation — hallo, hoe gaat het, and introducing yourself politely or casually.',
   },
   {
-    href: `${A0}/04-pronouns-and-zijn`,
-    category: 'Grammar',
-    title: "Pronouns and 'zijn'",
+    href: '/notes/scenarios/a1-train-ticket',
+    category: 'Scenario',
+    title: 'Buying a Train Ticket',
     description:
-      'Meet the verb you will use in nearly every sentence, and the pronouns that go with it.',
-  },
-  {
-    href: `${A1}/01-daily-routines`,
-    category: 'Everyday Dutch',
-    title: 'Daily Routines',
-    description:
-      'Describe your whole day — waking up, commuting, working, relaxing — in real, natural Dutch.',
+      'Practice a real station conversation — tickets, platforms, and the OV-chipkaart — before you need it.',
   },
   {
     href: `${A1}/03-negation`,
@@ -342,6 +417,13 @@ const FEATURED_LESSONS = [
     title: "Negation: 'niet' & 'geen'",
     description:
       'Two words for “not”, one classic beginner trap. Learn once, never mix them up again.',
+  },
+  {
+    href: '/notes/b1/24-particles-masterclass',
+    category: 'B1',
+    title: 'Particles Masterclass',
+    description:
+      'The little words — toch, even, maar, hoor — that make your Dutch sound genuinely Dutch.',
   },
 ];
 
@@ -354,7 +436,7 @@ const PHRASES = [
 ];
 
 const STATS = [
-  { value: '90+', label: 'Lessons' },
+  { value: '150+', label: 'Lessons' },
   { value: 'A0→B1', label: 'Full Path' },
   { value: '100%', label: 'Free' },
 ];
@@ -367,12 +449,10 @@ const FOOTER_LINKS: {
     heading: 'Course',
     links: [
       { label: 'All Notes', href: '/notes' },
-      {
-        label: 'A0: The Absolute Basics',
-        href: `${A0}/01-greetings-and-introductions`,
-      },
-      { label: 'A1: Everyday Dutch', href: `${A1}/01-daily-routines` },
-      { label: 'A0 Review & Test', href: `${A0}/review-and-test` },
+      { label: 'A0: The Absolute Basics', href: `${A0}/00-introduction` },
+      { label: 'A1: Everyday Dutch', href: `${A1}/00-introduction` },
+      { label: 'A2: Expanding Your Range', href: '/notes/a2/00-introduction' },
+      { label: 'B1: Towards Independence', href: '/notes/b1/00-introduction' },
     ],
   },
   {
@@ -381,19 +461,23 @@ const FOOTER_LINKS: {
       { label: 'Greetings', href: `${A0}/01-greetings-and-introductions` },
       { label: 'Alphabet & Spelling', href: `${A0}/02-alphabet-and-spelling` },
       { label: 'Numbers 0–20', href: `${A0}/03-numbers-0-20-and-age` },
-      {
-        label: 'Telling Time',
-        href: `${A0}/11-telling-time-and-reading-the-clock`,
-      },
+      { label: 'A0 Cheat Sheet', href: `${A0}/cheat-sheet` },
     ],
   },
   {
-    heading: 'Grammar',
+    heading: 'Tracks & Tools',
     links: [
-      { label: "Pronouns & 'zijn'", href: `${A0}/04-pronouns-and-zijn` },
-      { label: 'Word Order', href: `${A1}/02-word-order-svo` },
-      { label: 'Negation', href: `${A1}/03-negation` },
-      { label: 'Adjectives', href: `${A1}/11-adjectives` },
+      {
+        label: 'Real-Life Scenarios',
+        href: '/notes/scenarios/00-introduction',
+      },
+      {
+        label: 'Pronunciation',
+        href: '/notes/pronunciation/00-introduction',
+      },
+      { label: 'Grammar Reference', href: '/notes/grammar/00-introduction' },
+      { label: 'Daily Drill', href: '/notes/daily-drill' },
+      { label: 'Your Progress', href: '/notes/progress' },
     ],
   },
 ];
@@ -571,9 +655,10 @@ export default function HomePage() {
                 className="zv-reveal text-sm sm:text-base text-fd-muted-foreground max-w-md leading-relaxed"
                 style={{ ['--zv-delay' as string]: '220ms' }}
               >
-                A structured, CEFR-aligned Dutch course written for English
-                speakers — clear grammar, real dialogues, and exercises in every
-                lesson. No app streaks, no fluff.
+                A complete, CEFR-aligned Dutch course written for English
+                speakers — clear grammar, real dialogues, flashcards, and
+                exercises in every lesson, all the way from A0 to B1. No app
+                streaks, no fluff.
               </p>
 
               <div
@@ -659,7 +744,7 @@ export default function HomePage() {
               </h2>
               <p className="text-sm text-fd-muted-foreground max-w-lg">
                 Each phase takes you fully through the next CEFR level, with a
-                review-and-test checkpoint before you move on.
+                cheat sheet and a review-and-test checkpoint before you move on.
               </p>
             </div>
 
@@ -734,15 +819,35 @@ export default function HomePage() {
               })}
             </div>
 
-            <p className="mt-6 text-center text-xs text-fd-muted-foreground">
-              Plus dedicated{' '}
-              <span className="font-medium text-fd-foreground">Grammar</span>{' '}
-              and{' '}
-              <span className="font-medium text-fd-foreground">
-                Pronunciation
-              </span>{' '}
-              tracks on the roadmap.
-            </p>
+            <div className="mt-10">
+              <p className="mb-4 text-center text-[11px] font-semibold uppercase tracking-widest text-fd-muted-foreground">
+                Beyond the path
+              </p>
+              <div className="grid gap-3 sm:gap-4 sm:grid-cols-2 lg:grid-cols-4">
+                {TRACKS.map((track) => {
+                  const TrackIcon = track.icon;
+                  return (
+                    <Link
+                      key={track.href}
+                      href={track.href}
+                      className="group flex items-start gap-3 rounded-2xl border border-fd-border bg-fd-card hover:border-fd-primary/40 p-4 shadow-sm shadow-black/4 dark:shadow-none transition-all duration-150 hover:-translate-y-px hover:shadow-md hover:shadow-fd-primary/8 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fd-ring"
+                    >
+                      <div className="w-9 h-9 rounded-xl bg-fd-primary/10 flex items-center justify-center text-fd-primary shrink-0 transition-colors duration-150 group-hover:bg-fd-primary/18">
+                        <TrackIcon className="w-5 h-5" />
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-semibold text-fd-foreground group-hover:text-fd-primary transition-colors duration-150">
+                          {track.title}
+                        </h3>
+                        <p className="mt-1 text-xs text-fd-muted-foreground leading-relaxed">
+                          {track.description}
+                        </p>
+                      </div>
+                    </Link>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </section>
 

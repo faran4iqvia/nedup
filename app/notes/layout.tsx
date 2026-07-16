@@ -11,6 +11,7 @@ import {
   Hand,
   HatGlasses,
   ChartLine,
+  BookA,
 } from 'lucide-react';
 
 const tree = source.getPageTree();
@@ -23,10 +24,10 @@ const tabs = buildNotesTabs(tree, [
     icon: <Hand className="h-5 w-5 text-orange-500" />,
   },
   {
-    title: 'Drill and Progress',
-    description: 'Track & Drill',
-    url: '/notes/daily-drill',
-    icon: <ChartLine className="h-5 w-5 text-emerald-500" />,
+    title: 'Word Hub',
+    description: 'Words by Category',
+    url: '/notes/word-hub/00-introduction',
+    icon: <BookA className="h-5 w-5 text-lime-600" />,
   },
   {
     title: 'A0',
@@ -69,6 +70,13 @@ const tabs = buildNotesTabs(tree, [
     description: 'Dutch Grammar',
     url: '/notes/grammar/00-introduction',
     icon: <Lightbulb className="h-5 w-5 text-indigo-500" />,
+  },
+  {
+    title: 'Drill and Progress',
+    description: 'Track & Drill',
+    url: '/notes/daily-drill',
+    matchUrls: ['/notes/progress'],
+    icon: <ChartLine className="h-5 w-5 text-emerald-500" />,
   },
 ]);
 

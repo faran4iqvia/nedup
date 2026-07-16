@@ -78,26 +78,10 @@ UrduLg.displayName = 'UrduLg';
 
 // Arabic Font Components
 // Container base is 1.75rem (set in .font-arabic CSS class).
-// dir/lang set here so MDX authors need not wrap every phrase in manual spans.
-const ArabicSm = React.forwardRef<HTMLSpanElement, FontTextProps>(
-  ({ className, ...props }, ref) => (
-    <span
-      ref={ref}
-      dir="rtl"
-      lang="ar"
-      className={cn('font-arabic text-[1.25rem]! leading-loose', className)}
-      {...props}
-    />
-  )
-);
-ArabicSm.displayName = 'ArabicSm';
-
 const ArabicBase = React.forwardRef<HTMLSpanElement, FontTextProps>(
   ({ className, ...props }, ref) => (
     <span
       ref={ref}
-      dir="rtl"
-      lang="ar"
       className={cn('font-arabic text-[1.75rem] leading-loose', className)}
       {...props}
     />
@@ -109,8 +93,6 @@ const ArabicMd = React.forwardRef<HTMLSpanElement, FontTextProps>(
   ({ className, ...props }, ref) => (
     <span
       ref={ref}
-      dir="rtl"
-      lang="ar"
       className={cn('font-arabic text-4xl leading-loose', className)}
       {...props}
     />
@@ -122,8 +104,6 @@ const ArabicLg = React.forwardRef<HTMLSpanElement, FontTextProps>(
   ({ className, ...props }, ref) => (
     <span
       ref={ref}
-      dir="rtl"
-      lang="ar"
       className={cn('font-arabic text-5xl leading-loose', className)}
       {...props}
     />
@@ -137,7 +117,6 @@ export {
   UrduBase,
   UrduMd,
   UrduLg,
-  ArabicSm,
   ArabicBase,
   ArabicMd,
   ArabicLg,

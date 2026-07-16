@@ -14,13 +14,15 @@ export const gitConfig = {
    Instagram — single source of truth
 ───────────────────────────────────────────── */
 
-export const instagramHandle = 'ogshaykhspear';
+// export const instagramHandle = 'ogshaykhspear';
+export const instagramHandle = 'ibne.arif';
 
 // Clean, canonical profile URL (no params).
 export const instagramUrl = `https://www.instagram.com/${instagramHandle}`;
 
 // Instagram's referral token from the profile's "Copy link".
-const instagramShareToken = 'ZDNlZDc0MzIxNw==';
+// const instagramShareToken = 'ZDNlZDc0MzIxNw=='; // ogShaykhSpear igsh
+const instagramShareToken = 'MXRscnl0anJ2MmhncQ=='; // ibne.arif igsh
 
 // Builds a tracked follow URL. `igsh` is read by Instagram itself; the
 // utm_* keys are ready for the destination's own outbound-click analytics.

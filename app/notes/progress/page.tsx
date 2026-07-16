@@ -1,5 +1,6 @@
 import NotesToolPage from '@/components/app-ui/notes-tool-page';
 import ProgressDashboard from '@/components/app-ui/progress-dashboard';
+import { linkButtonClass } from '@/lib/link-button';
 import Link from 'next/link';
 
 export const metadata = {
@@ -13,11 +14,14 @@ export default function ProgressPage() {
       title="Your Progress"
       description="Local storage only — export a backup before switching devices."
     >
-      <p className="mb-6 text-sm">
-        <Link href="/notes" className="text-fd-primary hover:underline">
+      <div className="mb-6 flex flex-col gap-2 sm:flex-row">
+        <Link href="/notes" className={linkButtonClass}>
           ← Back to Welcome
         </Link>
-      </p>
+        <Link href="/notes/daily-drill" className={linkButtonClass}>
+          Daily Drill →
+        </Link>
+      </div>
       <ProgressDashboard />
     </NotesToolPage>
   );

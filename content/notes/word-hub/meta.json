@@ -1,0 +1,18 @@
+{
+  "title": "🗂️ Word Hub",
+  "description": "Every Dutch word, grouped by type — a reference dictionary organised by category",
+  "root": true,
+  "pagesIndex": "00-introduction",
+  "pages": [
+    "00-introduction",
+    "nouns",
+    "verbs",
+    "adjectives",
+    "adverbs",
+    "prepositions",
+    "pronouns",
+    "conjunctions",
+    "numbers",
+    "question-words"
+  ]
+}

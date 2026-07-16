@@ -9,6 +9,8 @@ export const LESSON_STUDY_MINUTES: Record<string, number> = {
   'a0/01-greetings-and-introductions': 20,
   'a0/02-alphabet-and-spelling': 20,
   'a0/12-de-het-primer': 20,
+  'a0/13-nationalities-and-languages': 20,
+  'a0/14-getting-by-survival-phrases': 20,
   'a0/review-and-test': 35,
   // Reviews
   'a1/review-and-test': 45,

@@ -9,12 +9,12 @@ type FlashCardDeckProps = {
 };
 
 export default function FlashCardDeck({
-  title = 'Flashcard drill',
+  // title = 'Flashcard drill',
   children,
 }: FlashCardDeckProps) {
   return (
     <div className="my-4">
-      <h3 className="mb-2 text-lg font-semibold">{title}</h3>
+      {/* <h3 className="mb-2 text-lg font-semibold">{title}</h3> */}
       <p className="mb-3 text-sm text-fd-muted-foreground">
         Tap each card to flip. Say the Dutch side out loud before you reveal the
         English.

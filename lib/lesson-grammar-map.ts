@@ -84,6 +84,23 @@ export const LESSON_GRAMMAR_LINKS: Record<string, GrammarLink[]> = {
       label: 'Articles: de and het (full reference)',
     },
   ],
+  'a0/13-nationalities-and-languages': [
+    {
+      href: '/notes/grammar/04-present-tense-regular',
+      label: 'Present Tense: Regular Verbs (spreken, leren)',
+    },
+    { href: '/notes/grammar/02-verb-zijn', label: 'Verb: zijn (nationality)' },
+  ],
+  'a0/14-getting-by-survival-phrases': [
+    {
+      href: '/notes/grammar/05-question-formation',
+      label: 'Question Formation (Kunt u …?)',
+    },
+    {
+      href: '/notes/grammar/06-modal-verbs-intro',
+      label: 'Modal Verbs: kunnen (preview)',
+    },
+  ],
   'a1/01-daily-routines': [
     {
       href: '/notes/grammar/04-present-tense-regular',
@@ -202,6 +219,36 @@ export const LESSON_GRAMMAR_LINKS: Record<string, GrammarLink[]> = {
   'a1/21-separable-verbs': [
     { href: '/notes/grammar/15-separable-verbs', label: 'Separable Verbs' },
   ],
+  'a1/22-clothing-and-colours': [
+    {
+      href: '/notes/grammar/13-adjectives',
+      label: 'Adjectives (endings on colours)',
+    },
+    {
+      href: '/notes/grammar/15-separable-verbs',
+      label: 'Separable Verbs (aantrekken)',
+    },
+  ],
+  'a1/23-asking-and-giving-directions': [
+    {
+      href: '/notes/grammar/22-prepositions-place',
+      label: 'Prepositions: Place',
+    },
+    {
+      href: '/notes/grammar/07-word-order-svo',
+      label: 'Word Order (imperative)',
+    },
+  ],
+  'a1/24-making-plans-and-suggestions': [
+    {
+      href: '/notes/grammar/34-future-tense',
+      label: 'Future Tense: zullen (preview)',
+    },
+    {
+      href: '/notes/grammar/25-om-te-infinitive',
+      label: 'om te + Infinitive (zin om te)',
+    },
+  ],
   'a2/01-past-tense-depth': [
     {
       href: '/notes/grammar/19-past-tense-weak-strong',
@@ -308,6 +355,22 @@ export const LESSON_GRAMMAR_LINKS: Record<string, GrammarLink[]> = {
   ],
   'a2/21-passive-intro': [
     { href: '/notes/grammar/30-passive-voice', label: 'Passive Voice Intro' },
+  ],
+  'a2/22-present-continuous-aan-het': [
+    {
+      href: '/notes/grammar/07-word-order-svo',
+      label: 'Word Order (infinitive at the end)',
+    },
+  ],
+  'a2/23-telephone-calls': [
+    {
+      href: '/notes/grammar/15-separable-verbs',
+      label: 'Separable Verbs (doorverbinden, terugbellen)',
+    },
+    {
+      href: '/notes/grammar/20-modal-verbs-depth',
+      label: 'Modal Verbs (Mag ik … spreken?)',
+    },
   ],
   'b1/01-conjunctions-overview': [
     {

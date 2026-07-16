@@ -26,6 +26,8 @@ export const COURSE_LEVELS: CourseLevel[] = [
       'a0/10-ordering-food-and-drink',
       'a0/11-telling-time-and-reading-the-clock',
       'a0/12-de-het-primer',
+      'a0/13-nationalities-and-languages',
+      'a0/14-getting-by-survival-phrases',
     ],
   },
   {
@@ -33,7 +35,7 @@ export const COURSE_LEVELS: CourseLevel[] = [
     label: 'A1',
     reviewId: 'a1/review-and-test',
     cheatSheetPath: '/notes/a1/cheat-sheet',
-    lessonIds: Array.from({ length: 21 }, (_, i) => {
+    lessonIds: Array.from({ length: 24 }, (_, i) => {
       const n = String(i + 1).padStart(2, '0');
       const names = [
         'daily-routines',
@@ -57,6 +59,9 @@ export const COURSE_LEVELS: CourseLevel[] = [
         'simple-past-irregular',
         'reflexive-verbs',
         'separable-verbs',
+        'clothing-and-colours',
+        'asking-and-giving-directions',
+        'making-plans-and-suggestions',
       ];
       return `a1/${n}-${names[i]}`;
     }),
@@ -88,6 +93,8 @@ export const COURSE_LEVELS: CourseLevel[] = [
       'a2/19-appointments',
       'a2/20-conditional-als',
       'a2/21-passive-intro',
+      'a2/22-present-continuous-aan-het',
+      'a2/23-telephone-calls',
     ],
   },
   {

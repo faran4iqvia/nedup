@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { COURSE_LEVELS } from '@/lib/course-catalog';
 import { formatStudyMinutes } from '@/lib/lesson-study-minutes';
+import { linkButtonClass } from '@/lib/link-button';
 import {
   countCompletedScenarios,
   estimateRemainingMinutes,
@@ -18,10 +19,6 @@ import {
   readProgress,
   type ProgressState,
 } from '@/lib/progress-storage';
-
-function countKnownVocab(state: ProgressState): number {
-  return Object.values(state.knownVocab).filter(Boolean).length;
-}
 
 export default function ProgressDashboard() {
   const [state, setState] = useState<ProgressState | null>(null);
@@ -104,7 +101,7 @@ export default function ProgressDashboard() {
         browsers or clearing site data.
       </p>
 
-      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
         <div className="rounded-lg border border-fd-border p-4">
           <p className="text-2xl font-bold">{totalCompleted}</p>
           <p className="text-sm text-fd-muted-foreground">
@@ -118,10 +115,6 @@ export default function ProgressDashboard() {
           <p className="text-sm text-fd-muted-foreground">
             scenarios rehearsed
           </p>
-        </div>
-        <div className="rounded-lg border border-fd-border p-4">
-          <p className="text-2xl font-bold">{countKnownVocab(state)}</p>
-          <p className="text-sm text-fd-muted-foreground">words marked known</p>
         </div>
         <div className="rounded-lg border border-fd-border p-4">
           <p className="text-2xl font-bold">
@@ -213,21 +206,17 @@ export default function ProgressDashboard() {
         })}
       </div>
 
-      <p className="text-sm">
-        <Link
-          href="/notes/daily-drill"
-          className="text-fd-primary hover:underline"
-        >
+      <div className="flex flex-col gap-2 sm:flex-row">
+        <Link href="/notes/daily-drill" className={linkButtonClass}>
           → Daily drill (5 questions)
         </Link>
-        {' · '}
         <Link
           href="/notes/scenarios/00-introduction"
-          className="text-fd-primary hover:underline"
+          className={linkButtonClass}
         >
           Scenarios track
         </Link>
-      </p>
+      </div>
     </div>
   );
 }

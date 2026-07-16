@@ -2,5 +2,5 @@
   "title": "Welcome",
   "description": "Level up your Nederland / Dutch",
   "root": true,
-  "pages": ["a0", "a1", "a2", "b1", "scenarios", "pronunciation", "grammar"]
+  "pages": []
 }

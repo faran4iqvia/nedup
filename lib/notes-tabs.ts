@@ -7,6 +7,8 @@ export type NotesTabConfig = {
   description: string;
   url: string;
   icon: ReactNode;
+  /** Extra URLs that should also mark this tab active (e.g. sibling routes). */
+  matchUrls?: string[];
 };
 
 function collectFolderUrls(node: Folder | Root): Set<string> {
@@ -53,6 +55,11 @@ function findFolderForTab(
   return folders.find((folder) => {
     if (folder.index?.url === tabUrl) return true;
 
+    // A tab URL like `/notes/daily-drill` collapses to the base `/notes`, which
+    // is not a real section folder. Don't let it greedily match the first
+    // folder in the tree — fall back to the tab's own URL instead.
+    if (sectionPrefix === '/notes') return false;
+
     return folder.children.some(
       (child) =>
         child.type === 'page' && child.url.startsWith(`${sectionPrefix}/`)
@@ -66,9 +73,10 @@ export function buildNotesTabs(
 ): LayoutTab[] {
   const rootFolders = findRootFolders(tree);
 
-  return configs.map((config) => {
+  return configs.map(({ matchUrls, ...config }) => {
     const folder = findFolderForTab(rootFolders, config.url);
     const urls = folder ? collectFolderUrls(folder) : new Set([config.url]);
+    for (const extra of matchUrls ?? []) urls.add(extra);
 
     return {
       ...config,

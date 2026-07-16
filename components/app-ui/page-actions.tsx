@@ -59,7 +59,7 @@ const PageActions: React.FC<PageActionsProps> = ({
 
   // No handlers stored in data — buttons fall back to handleCopyLink at render.
   const defaultActions: PageAction[] = [
-    { label: 'Give Feedback', icon: '✍️', href: feedbackUrl },
+    { label: 'Like If You Loved It', icon: '👍', href: feedbackUrl },
     ...(showShareLink ? [{ label: 'Share Link', icon: '' }] : []),
   ];
 

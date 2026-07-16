@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     default: appName,
     template: `%s | ${appName}`,
   },
-  description: 'Quran notes and documentation.',
+  description: 'Lets learn Dutch together',
   openGraph: {
     siteName: appName,
     type: 'website',
