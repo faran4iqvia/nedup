@@ -24,11 +24,29 @@ check 'no broken a1/10-perfect link' 'a1/10-perfect'
 check 'no broken a1/17-reflexive link' 'a1/17-reflexive'
 check 'no misleading 01-42 → personal-pronouns in phrase callouts' 'core grammar files \[01–42\]\(/notes/grammar/01-personal-pronouns\)'
 
-if ! rg -q '#track-bands' "$GRAMMAR/00-introduction.mdx"; then
-  echo "FAIL: 00-introduction missing #track-bands"
+intro="$GRAMMAR/00-introduction.mdx"
+for pair in \
+  "Track bands|^### Track bands" \
+  "Core grammar|^### Core grammar" \
+  "Word order spine|^### Word order spine" \
+  "Tense spine|^### Tense spine" \
+  "Connector hub|^### Connector hub" \
+  "How to study|^### How to study"; do
+  label="${pair%%|*}"
+  pattern="${pair#*|}"
+  if ! rg -q "$pattern" "$intro"; then
+    echo "FAIL: 00-introduction missing ### $label"
+    fail=1
+  else
+    echo "OK:   00-introduction has ### $label"
+  fi
+done
+
+if ! rg -q '^### Phrase register' "$GRAMMAR/register-and-formality.mdx"; then
+  echo "FAIL: register-and-formality missing ### Phrase register"
   fail=1
 else
-  echo "OK:   00-introduction has #track-bands"
+  echo "OK:   register-and-formality has ### Phrase register"
 fi
 
 # Phase 6: B1 core 31-42 classroom loop
@@ -69,13 +87,6 @@ else
   echo "OK:   $before_count files with Before this page (≥22)"
 fi
 
-if ! rg -q '#word-order-spine' "$GRAMMAR/00-introduction.mdx"; then
-  echo "FAIL: missing #word-order-spine anchor"
-  fail=1
-else
-  echo "OK:   #word-order-spine anchor present"
-fi
-
 # Phase 8: Part B on phrase files 43-58
 for i in $(seq 43 58); do
   path=$(ls "$GRAMMAR"/$(printf '%02d' "$i")-*.mdx 2>/dev/null | head -1)
@@ -100,23 +111,37 @@ done
 if [ "$fail" -eq 0 ]; then
   echo "OK:   hub pages tense-and-register-choice and connector-choice exist"
 fi
-if ! rg -q '#tense-spine' "$GRAMMAR/00-introduction.mdx"; then
-  echo "FAIL: 00-introduction missing #tense-spine"
-  fail=1
-else
-  echo "OK:   00-introduction has #tense-spine"
-fi
-if ! rg -q '#connector-hub' "$GRAMMAR/00-introduction.mdx"; then
-  echo "FAIL: 00-introduction missing #connector-hub"
-  fail=1
-else
-  echo "OK:   00-introduction has #connector-hub"
-fi
 if ! rg -q 'tense-and-register-choice' "$GRAMMAR/meta.json"; then
   echo "FAIL: meta.json missing tense hub"
   fail=1
 else
   echo "OK:   meta.json lists hub pages"
+fi
+
+lesson_missing=$(python3 - <<'PY'
+import re
+from pathlib import Path
+notes = Path("content/notes")
+missing = []
+for level in ("a0", "a1", "a2", "b1"):
+    for path in (notes / level).glob("*.mdx"):
+        if path.name in ("00-introduction.mdx", "cheat-sheet.mdx", "review-and-test.mdx"):
+            continue
+        text = path.read_text()
+        for m in re.finditer(r'<Callout title="Grammar Focus"[^>]*>\s*(.*?)\s*</Callout>', text, re.DOTALL):
+            if "/notes/grammar/" not in m.group(1) and path.name != "07-numbers-21-100-and-money.mdx":
+                missing.append(str(path.relative_to(notes)))
+                break
+if missing:
+    print("\n".join(missing))
+PY
+)
+if [ -n "$lesson_missing" ]; then
+  echo "FAIL: Grammar Focus without grammar link:"
+  echo "$lesson_missing"
+  fail=1
+else
+  echo "OK:   main lessons link Grammar Focus to grammar track"
 fi
 
 exit "$fail"
