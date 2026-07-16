@@ -22,7 +22,11 @@ function normalizePath(url: string): string {
 function isActive(href: string, pathname: string): boolean {
   const h = normalizePath(href);
   const p = normalizePath(pathname);
-  return h === p || p.startsWith(`${h}/`);
+  if (h === p) return true;
+  // Welcome index (/notes) is a sibling of other top-level pages (e.g.
+  // /notes/inburgering-a2-plan), not a URL prefix for them.
+  if (h === '/notes') return false;
+  return p.startsWith(`${h}/`);
 }
 
 function getItemOffset(depth: number): string {

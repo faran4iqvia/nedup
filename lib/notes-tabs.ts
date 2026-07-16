@@ -42,12 +42,29 @@ function findRootFolders(node: Root | Folder): Folder[] {
   return folders;
 }
 
+/** Top-level Welcome pages (siblings of index) that belong on the Welcome tab. */
+const WELCOME_PAGE_URLS = [
+  '/notes/inburgering-a2-plan',
+  '/notes/inburgering-b1-plan',
+] as const;
+
+function isWelcomeFolder(folder: Folder): boolean {
+  if (folder.index?.url === '/notes') return true;
+  return folder.children.some(
+    (child) =>
+      child.type === 'page' &&
+      WELCOME_PAGE_URLS.includes(
+        child.url as (typeof WELCOME_PAGE_URLS)[number]
+      )
+  );
+}
+
 function findFolderForTab(
   folders: Folder[],
   tabUrl: string
 ): Folder | undefined {
   if (tabUrl === '/notes') {
-    return folders.find((folder) => folder.index?.url === '/notes');
+    return folders.find(isWelcomeFolder);
   }
 
   const sectionPrefix = tabUrl.replace(/\/[^/]+$/, '');
@@ -77,6 +94,9 @@ export function buildNotesTabs(
     const folder = findFolderForTab(rootFolders, config.url);
     const urls = folder ? collectFolderUrls(folder) : new Set([config.url]);
     for (const extra of matchUrls ?? []) urls.add(extra);
+    if (config.url === '/notes') {
+      for (const welcomeUrl of WELCOME_PAGE_URLS) urls.add(welcomeUrl);
+    }
 
     return {
       ...config,

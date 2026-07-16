@@ -230,6 +230,19 @@ const Icon = {
       />
     </svg>
   ),
+  flag: (p: IconProps) => (
+    <svg
+      viewBox="0 0 20 20"
+      fill="none"
+      className={p.className}
+      aria-hidden="true"
+    >
+      <path
+        d="M4.5 2.75A.75.75 0 0 1 5.25 2h8.5a.75.75 0 0 1 .58 1.22L12.8 5.5h2.45a.75.75 0 0 1 .58 1.22l-2.53 2.28h2.45a.75.75 0 0 1 .58 1.22l-3.53 3.18V17a.75.75 0 0 1-1.5 0v-3.28L7.72 10.5H5.25a.75.75 0 0 1-.75-.75v-7Z"
+        fill="currentColor"
+      />
+    </svg>
+  ),
   instagram: (p: IconProps) => (
     <svg
       viewBox="0 0 20 20"
@@ -337,6 +350,14 @@ const PHASES = [
     status: 'live' as const,
     statusLabel: '',
   },
+];
+
+const INBURGERING_EXAMS = [
+  { name: 'Lezen', detail: 'Reading at A2' },
+  { name: 'Luisteren', detail: 'Listening at A2' },
+  { name: 'Schrijven', detail: 'Writing on paper' },
+  { name: 'Spreken', detail: 'Speaking prompts' },
+  { name: 'KNM', detail: 'Dutch society' },
 ];
 
 const TRACKS = [
@@ -462,6 +483,14 @@ const FOOTER_LINKS: {
       { label: 'Alphabet & Spelling', href: `${A0}/02-alphabet-and-spelling` },
       { label: 'Numbers 0–20', href: `${A0}/03-numbers-0-20-and-age` },
       { label: 'A0 Cheat Sheet', href: `${A0}/cheat-sheet` },
+      {
+        label: 'A2 Inburgering Plan',
+        href: '/notes/inburgering-a2-plan',
+      },
+      {
+        label: 'B1 Inburgering Plan',
+        href: '/notes/inburgering-b1-plan',
+      },
     ],
   },
   {
@@ -846,6 +875,112 @@ export default function HomePage() {
                     </Link>
                   );
                 })}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ── Inburgering exam plans ─────────────── */}
+        <section
+          className="relative z-10 px-4 sm:px-6 lg:px-8 py-16 scroll-mt-24"
+          id="inburgering"
+          aria-labelledby="inburgering-heading"
+        >
+          <div className="mx-auto max-w-5xl">
+            <div className="flex flex-col items-center text-center gap-3 mb-8">
+              <SectionLabel>Living in the Netherlands</SectionLabel>
+              <h2
+                id="inburgering-heading"
+                className="text-2xl sm:text-3xl font-semibold tracking-tight text-fd-foreground"
+              >
+                Inburgering exam study plans
+              </h2>
+              <p className="text-sm text-fd-muted-foreground max-w-lg">
+                Check Mijn Inburgering for your level (A2 or B1). Dutchyy maps
+                lessons, scenarios, and reviews to each DUO exam part plus KNM.
+              </p>
+            </div>
+
+            <div className="grid gap-4 md:grid-cols-2">
+              <div className="flex flex-col gap-4 rounded-2xl border border-fd-primary/25 bg-linear-to-br from-fd-primary/8 via-fd-card to-fd-card p-6 shadow-sm shadow-fd-primary/10">
+                <h3 className="text-lg font-semibold text-fd-foreground">
+                  A2 route
+                </h3>
+                <p className="text-sm text-fd-muted-foreground leading-relaxed flex-1">
+                  Five DUO exams at CEFR A2. Pen and paper Schrijven. Full path:
+                  A0 to A2 (61 lessons). About 20 weeks at 25 minutes per day,
+                  plus official oefenexamens.
+                </p>
+                <ul className="grid grid-cols-2 gap-2 text-xs">
+                  {INBURGERING_EXAMS.map((exam) => (
+                    <li
+                      key={`a2-${exam.name}`}
+                      className="rounded-lg border border-fd-border bg-fd-background/60 px-2.5 py-2"
+                    >
+                      <span className="font-semibold text-fd-foreground">
+                        {exam.name}
+                      </span>
+                    </li>
+                  ))}
+                </ul>
+                <Link
+                  href="/notes/inburgering-a2-plan"
+                  className="group inline-flex w-fit items-center gap-2 rounded-xl bg-fd-primary hover:bg-fd-primary/90 px-5 py-2.5 text-sm font-semibold text-fd-primary-foreground shadow-md shadow-fd-primary/20 transition-all duration-150 hover:-translate-y-px"
+                >
+                  A2 study plan
+                  <Arrow className="w-3.5 h-3.5 transition-transform duration-150 group-hover:translate-x-0.5" />
+                </Link>
+              </div>
+
+              <div className="flex flex-col gap-4 rounded-2xl border border-fd-border bg-fd-card p-6 shadow-sm">
+                <h3 className="text-lg font-semibold text-fd-foreground">
+                  B1 route (Wet inburgering 2021)
+                </h3>
+                <p className="text-sm text-fd-muted-foreground leading-relaxed flex-1">
+                  Staatsexamen NT2 Programma I at CEFR B1. Schrijven on a
+                  keyboard. Full path: A0 through B1 (89 lessons). About 30
+                  weeks at 30 minutes per day, plus Programma I oefenexamens and
+                  KNM.
+                </p>
+                <ul className="grid grid-cols-2 gap-2 text-xs text-fd-muted-foreground">
+                  <li className="rounded-lg border border-fd-border px-2.5 py-2">
+                    <span className="font-semibold text-fd-foreground">
+                      Lezen
+                    </span>{' '}
+                    · 110 min
+                  </li>
+                  <li className="rounded-lg border border-fd-border px-2.5 py-2">
+                    <span className="font-semibold text-fd-foreground">
+                      Luisteren
+                    </span>{' '}
+                    · 90 min
+                  </li>
+                  <li className="rounded-lg border border-fd-border px-2.5 py-2">
+                    <span className="font-semibold text-fd-foreground">
+                      Schrijven
+                    </span>{' '}
+                    · typed
+                  </li>
+                  <li className="rounded-lg border border-fd-border px-2.5 py-2">
+                    <span className="font-semibold text-fd-foreground">
+                      Spreken
+                    </span>{' '}
+                    · 30 min
+                  </li>
+                  <li className="rounded-lg border border-fd-border px-2.5 py-2 col-span-2">
+                    <span className="font-semibold text-fd-foreground">
+                      KNM
+                    </span>{' '}
+                    · Dutch society (same as A2 route)
+                  </li>
+                </ul>
+                <Link
+                  href="/notes/inburgering-b1-plan"
+                  className="group inline-flex w-fit items-center gap-2 rounded-xl border border-fd-border bg-fd-background hover:border-fd-primary/40 px-5 py-2.5 text-sm font-semibold text-fd-foreground transition-all duration-150 hover:-translate-y-px"
+                >
+                  B1 study plan
+                  <Arrow className="w-3.5 h-3.5 transition-transform duration-150 group-hover:translate-x-0.5" />
+                </Link>
               </div>
             </div>
           </div>

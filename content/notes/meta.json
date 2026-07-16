@@ -2,5 +2,6 @@
   "title": "Welcome",
   "description": "Level up your Nederland / Dutch",
   "root": true,
-  "pages": []
+  "pagesIndex": "index",
+  "pages": ["index", "inburgering-a2-plan", "inburgering-b1-plan"]
 }

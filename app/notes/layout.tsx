@@ -21,6 +21,7 @@ const tabs = buildNotesTabs(tree, [
     title: 'Welcome',
     description: 'Start Here',
     url: '/notes',
+    matchUrls: ['/notes/inburgering-a2-plan', '/notes/inburgering-b1-plan'],
     icon: <Hand className="h-5 w-5 text-orange-500" />,
   },
   {
