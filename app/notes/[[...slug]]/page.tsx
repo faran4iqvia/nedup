@@ -15,6 +15,7 @@ import { notFound } from 'next/navigation';
 import { getMDXComponents } from '@/components/mdx';
 import PageActions from '@/components/app-ui/page-actions';
 import GrammarTaughtIn from '@/components/app-ui/grammar-taught-in';
+import PronunciationTaughtIn from '@/components/app-ui/pronunciation-taught-in';
 import type { Metadata } from 'next';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 
@@ -44,6 +45,11 @@ export default async function Page(props: PageProps<'/notes/[[...slug]]'>) {
     slugPath !== 'grammar/00-introduction' &&
     slugPath !== 'grammar/review-and-practice';
 
+  const isPronunciationLesson =
+    params.slug?.[0] === 'pronunciation' &&
+    slugPath !== 'pronunciation/00-introduction' &&
+    slugPath !== 'pronunciation/review-and-practice';
+
   return (
     <DocsPage toc={page.data.toc} full={page.data.full}>
       <DocsTitle
@@ -69,6 +75,9 @@ export default async function Page(props: PageProps<'/notes/[[...slug]]'>) {
       <DocsBody>
         {isGrammarLesson && (
           <GrammarTaughtIn grammarPath={`/notes/${slugPath}`} />
+        )}
+        {isPronunciationLesson && (
+          <PronunciationTaughtIn pronunciationPath={`/notes/${slugPath}`} />
         )}
         <MDX
           components={getMDXComponents({

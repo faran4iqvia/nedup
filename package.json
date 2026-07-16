@@ -10,7 +10,10 @@
     "postinstall": "fumadocs-mdx",
     "lint": "eslint",
     "format": "prettier --write . && mdxlint . --output",
-    "format:check": "prettier --check . && mdxlint . --frail"
+    "format:check": "prettier --check . && mdxlint . --frail",
+    "validate:grammar": "bash scripts/validate-grammar-track.sh",
+    "validate:pronunciation": "bash scripts/validate-pronunciation-track.sh",
+    "validate": "npm run validate:grammar && npm run validate:pronunciation"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.16",
